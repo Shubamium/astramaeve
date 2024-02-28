@@ -23,3 +23,26 @@ body{
 main{
 	min-height: 200vh;
 }
+
+
+.decor_background-circle{
+	position: fixed;
+	left: -50vw;
+	top: -70vh;
+	width: 2500px;
+	animation: speen 190s infinite linear;
+	opacity: 1;
+	filter: brightness(120%) blur(4px);
+	
+}
+
+
+@keyframes speen {
+	0%{
+		rotate: 0deg;
+	}
+	100%{
+		rotate: 720deg;
+	}
+}
+	

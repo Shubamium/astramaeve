@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cinzelDecorative.className}>{children}</body>
+      <body className={cinzelDecorative.className}>
+
+				<img src="/decors/giant_arrow_circle.png" alt=""  className="decor_background-circle"/>
+				{children}
+			</body>
     </html>
   );
 }

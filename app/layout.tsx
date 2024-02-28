@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Cinzel_Decorative } from "next/font/google";
+import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const cinzelDecorative = Cinzel_Decorative({ subsets: ["latin"],weight:['400','700','900'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cinzelDecorative.className}>{children}</body>
     </html>
   );
 }

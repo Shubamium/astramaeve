@@ -1,0 +1,250 @@
+#navigation{
+	
+	.sidebar{
+		position: fixed;
+		height: 100vh;
+		background:linear-gradient(90deg, rgba(0, 0, 0, 0.233), transparent);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		transform: translate(-47%);
+		writing-mode: vertical-lr;
+
+		gap: 2vw;
+		.logo_side{
+			max-width: 100%;
+			width: 20vw;
+			// margin: -10vw;
+			margin-inline: -2vw;
+			position: relative;
+			height: 50vh;
+			transition: all 550ms ease;
+			cursor: pointer;
+			user-select: none;
+			transform: translate(-2%);
+			&:hover{
+				scale: 1.2;
+				filter: drop-shadow(.2vw .5vw 1vw white);
+			}
+			&:active{
+				scale: 1;
+			}
+		}
+
+		.side-text{
+			color: black;
+			font-size: .6vw;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			// justify-content: center;
+			height: 100%;
+			width: 100%;
+			gap: 1em;
+
+			&.top{
+				justify-content: end;
+			}
+			p{
+				white-space: nowrap;
+			}
+			hr{
+				height: 40%;
+				width: .05vw;
+				border: none;
+				background: black;
+			}
+		}
+	}
+
+	.sidebar-overlay{
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+		user-select: none;
+		pointer-events: none;
+		background: rgba(34, 32, 47, 0.74);
+		transition: all 250ms,height 0ms, width 0ms;
+		z-index: 100;
+		opacity: 0;
+		 &::before{
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			background: url('/backgrounds/shattered_glass.png'),white;
+			backdrop-filter: blur(.2vw);
+			filter: blur(1vw);
+			background-size: cover;
+			mix-blend-mode: exclusion;
+			opacity: 0;
+			transition: all 50ms,filter 250ms ease, height 0ms, width 0ms;
+			transform-origin: right;
+			user-select: none;
+			transition-delay: 550ms;
+			pointer-events: none;
+			// filter: sepia(1);
+			scale: 0 1;
+		 }
+	}
+
+	.sidebar-nav{
+		position:fixed;
+		top:0%;
+		left:0%;
+		width:100%;
+		height:100%;
+		// background: rgb(15, 72, 82);
+		// background-blend-mode: multiply;
+		z-index: 150;
+		pointer-events: none;
+		user-select: none;
+		transition: all 550ms ease;
+		opacity: 0;
+		display: flex;
+		align-items: center;
+		.links{
+			height: 100%;
+			// background: red;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-left: 2vw;
+			.nav-circle{
+				position: absolute;
+				height: 100%;
+				// width: 100%;
+				top: 0%;
+				scale: .7;
+				right: 74%;
+				z-index: -2;
+				animation: speen 150s;
+				pointer-events: none;
+			}
+			gap: 1vw;
+			.sidebar-link{
+				text-align: left;
+				padding-left: 1vw;
+				text-decoration: none;
+				border-radius: 2vw;
+				padding: .25vw 2vw;
+				background: url('/backgrounds/galaxy_subtle.png'),linear-gradient(92deg, #94D2FF 0%, rgba(255, 221.68, 136, 0.90) 46%, rgb(129, 126, 126) 100%);
+				background-blend-mode: overlay;
+				font-family: var(--fontAlt);
+				color: white;
+				box-shadow: 0vw 0.4vw 1vw #26365f7b;
+				transition: all 250ms ease;
+				transform-origin: left;
+				font-size: 1.5vw;
+				min-width: 15vw;
+				font-weight: bold;
+				user-select: none;
+				position: relative;
+				&::before{
+					content:'';
+					position:absolute;
+					top:0%;
+					left:85%;
+					width:15%;
+					height:100%;
+					background: url('/decors/nav-gem.png');
+					// background: red;
+					background-size: contain;
+					scale: 1.1;
+					transition: all 250ms ease,rotate 500ms;
+					background-repeat: no-repeat;
+					// transform-origin: 30%;
+				}
+				
+				span{
+					font-weight: normal;
+					padding-right: .2vw;
+				}
+				text-shadow: 0vw 0.2vw .2vw #749af9;
+
+				&:hover{
+					scale: 1.05;
+					box-shadow: 0vw 0.2vw 1.2vw #749af9c2;
+					&::before{
+						scale: 1.3;
+						rotate: -1.25turn;
+					}
+				}
+			}
+		}
+
+		.links-hover{
+			text-decoration: none;
+			border-radius: 1vw;
+			padding: 1.5vw 2vw;
+			background: url('/backgrounds/galaxy_subtle.png'),linear-gradient(105deg, #94D2FF 0%, rgba(255, 221.68, 136, 0.90) 46%, rgba(217, 217, 217, 0.29) 100%);
+			background-blend-mode: overlay;
+			color: white;
+			height: max-content;
+			box-shadow: 0vw 0.4vw 1vw #26365f7b;
+			margin-left: 2vw;
+			min-width: 20vw;
+			display: flex;
+			flex-direction: column;
+
+			transition: all 500ms ease;
+			min-height: 10vw;
+			
+			gap:1vw;
+			box-shadow: 0vw 0.4vw 1vw #26365f7b;
+			.sidebar-hover-link{
+				color: white;
+				text-decoration: none;
+				font-size: 1.5vw;
+				text-shadow: 0vw 0.2vw .2vw #749af9;
+				
+				span{
+					transition: all 1.2s ease;
+					display: block;
+					user-select: none;
+				}
+				&:hover{
+					span{
+						transform: translateX(1vw);
+					}
+				}
+			}
+
+			&.closed{
+				opacity: 0;
+				transform: translateY(10vw);
+			}
+			&.open{
+				opacity: 1;
+			}
+			
+		}
+	}
+	&.open{
+		.sidebar-overlay{
+		
+			backdrop-filter: blur(.28vw);
+			opacity: 1;
+			user-select: all;
+			pointer-events: all;
+
+			&::before{
+				scale: 1 1;
+				opacity: 0.1;
+				filter: blur(0vw);
+			}
+		}
+
+		.sidebar-nav{
+			backdrop-filter: blur(1.2vw);
+			pointer-events: all;
+			user-select: all;
+			transition-delay: 1.8s;
+			opacity: 1;
+		
+		}
+	}
+}

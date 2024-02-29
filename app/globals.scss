@@ -6,6 +6,7 @@
 
 body{
 	
+	font-family: var(--fontMain);
 	&::before{
 		content:'';
 		position:fixed;
@@ -29,10 +30,12 @@ main{
 	position: fixed;
 	left: -50vw;
 	top: -70vh;
-	width: 2500px;
+	width: 130vw;
 	animation: speen 190s infinite linear;
-	opacity: 1;
-	filter: brightness(120%) blur(4px);
+	opacity: .9;
+	mix-blend-mode: hard-light;
+	// z-index: -100;
+	// filter: brightness(120%) blur(4px);
 	
 }
 
@@ -46,3 +49,9 @@ main{
 	}
 }
 	
+
+.ni{
+	user-select: none;
+	pointer-events: none;
+	
+}

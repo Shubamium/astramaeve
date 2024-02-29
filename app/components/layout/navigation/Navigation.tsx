@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './navigation.scss'
 import Link from 'next/link';
 type Props = {}
@@ -84,6 +84,7 @@ export default function Navigation({}: Props) {
 	
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const [isSubOpen, setIsSubOpen] = useState(false);
+	const videoRef = useRef<HTMLVideoElement>(null);
 	const [activeSub, setActiveSub] = useState<Navlist>('home');
 
 	
@@ -101,8 +102,22 @@ export default function Navigation({}: Props) {
 		setIsSubOpen(false);
 	}
 
+	const openNav = ()=>{
+		setIsSidebarOpen(true)
+		if(videoRef.current){
+			videoRef.current.currentTime = 0
+		}
+		setTimeout(()=>{
+			videoRef.current?.play()
+		},2200)
+	}
 	const closeNav = ()=>{
 		setIsSidebarOpen(false);
+		if(videoRef.current){
+			videoRef.current.currentTime = 0
+			videoRef.current.pause();
+		}
+	
 	}
 	return (
 		<div id='navigation' className={isSidebarOpen ? 'open' : 'close'}>
@@ -111,18 +126,16 @@ export default function Navigation({}: Props) {
 					<p>navigation</p>
 					<hr />
 				</div>
-				<img src="./decors/logo_small.png" alt="" className='logo_side' onClick={()=>{
-					setIsSidebarOpen(true)
-				}} />
+				<img src="./decors/logo_small.png" alt="" className='logo_side' onClick={openNav} />
 				<div className="side-text">
 					<hr />
 					<p>website design by shubamium</p>
 				</div>
 			</div>
-			<div className="sidebar-overlay">
+			<div className="sidebar-overlay" >
 			</div>
 
-		<nav className='sidebar-nav'>
+		<nav className='sidebar-nav' onClickCapture={closeNav}>
 			<div className="links">
 				<img src="/decors/nav-circle.png" alt="" className='nav-circle ni' />
 				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('home')}} className='sidebar-link' href={'/'}><span>✵</span>HOME</Link>
@@ -133,6 +146,7 @@ export default function Navigation({}: Props) {
 				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('terms')}} className='sidebar-link' href={'/terms'}><span>✵</span>TERMS</Link>
 				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('contacts')}} className='sidebar-link' href={'/contacts'}><span>✵</span>CONTACTS</Link>
 			</div>
+			<video src="/video/shatter1.webm" muted ref={videoRef} className='decor_shatter' playsInline></video>
 			<div onMouseLeave={closeSub} className={`links-hover ${isSubOpen ? 'open' : 'closed'}` }>
 				{subLinks[activeSub].map((link)=>{
 					return (

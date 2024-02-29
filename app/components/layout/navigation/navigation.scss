@@ -1,17 +1,17 @@
 #navigation{
-	
+	position: relative;
+	z-index: 1;
 	.sidebar{
 		position: fixed;
 		height: 100vh;
 		background:linear-gradient(90deg, rgba(0, 0, 0, 0.233), transparent);
-
+		pointer-events: visible;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 		transform: translate(-47%);
 		writing-mode: vertical-lr;
-
 		gap: 2vw;
 		.logo_side{
 			max-width: 100%;
@@ -43,7 +43,7 @@
 			height: 100%;
 			width: 100%;
 			gap: 1em;
-
+			user-select: text;
 			&.top{
 				justify-content: end;
 			}

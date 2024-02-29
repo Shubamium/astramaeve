@@ -25,6 +25,7 @@ export default function RootLayout({
 				<img src="/decors/logo_small.png" alt=""  className="decor_top logo ni"/>
 				<img src="/decors/galaxy_circle.png" alt=""  className="decor_top circle ni"/>
 				{children}
+
 			</body>
     </html>
   );

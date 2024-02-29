@@ -1,0 +1,152 @@
+#page_home{
+	overflow:hidden;
+	.decor{
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 0%;
+		left: 0%;
+
+		.decor_frame{
+			width: 100vw;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			&.top{
+				scale: 1 -1;
+			}
+			&.bottom{
+				left: 0%;
+				top: initial;
+				bottom: 0%;
+			}
+			
+		}
+	}
+
+	.content{
+		max-height: 100vh;
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		.text-part{
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+			justify-content: center;
+			padding-right: 25vw;
+			max-height: 100vh;
+			.pretitle{
+				color: #2DFFFF;
+				text-shadow: 2px 2px 4px #0047FF;
+				letter-spacing: .4vw;
+				font-size: 1vw;
+
+			}
+			.main-title{
+				line-height: 110%;
+				font-size: 4vw;
+				font-family: var(--fontAlt);
+				color: white;
+				text-shadow: .2vw .2vw 0.4vw #0048ff78;
+			}
+			.subtitle{
+				text-shadow: .1vw .1vw .5vw #e3b9f881;
+				padding-top: .55vw;
+				font-size: 1vw;
+				color:#e880ff;
+				
+			}
+			.action{
+				display: flex;
+				gap: .55vw;
+				padding: 1vw 0;
+				.btn-main{
+					display: block;
+					padding: .2vw 2vw;
+					background: linear-gradient(172deg, rgba(0, 25.50, 255, 0.61) 0%, rgba(161.80, 117.94, 255, 0) 100%);
+					border-radius: 2vw;
+					outline: .1vw solid #FFAF00;
+					box-shadow: 0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.519);
+					text-shadow: 0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.519);
+					font-weight: 700;
+					font-size: 1.1vw;
+					&.ghost{
+						background: linear-gradient(178deg, rgba(0, 26, 255, 0.226) 0%, rgba(161.80, 117.94, 255, 0) 100%);
+						outline: 0.1vw solid white;
+					}
+					&:hover{
+						scale: 1.02;
+						box-shadow: 0.1vw 0.1vw 0.4vw #0047FF;
+					}
+				}
+			}
+
+			position: relative;
+			.decoration{
+				position: absolute;
+				z-index: -1;
+				height: 100%;
+				width: 100%;
+				// background: red;
+				.decor_blob{
+					position: absolute;
+					top: 30%;
+					right: 30%;
+					width: 15vw;
+					opacity: .8;
+					height: 15vw;
+					mix-blend-mode: lighten;
+					// background: white;
+					opacity: 0.3;
+					// filter: blur(2vw);
+				}
+				.decor_rainbow{
+					position: absolute;
+					top: 10%;
+					right: 10%;
+					width: 35vw;
+					height: 35vw;
+					mix-blend-mode: color-dodge;
+					animation: speen 250s infinite linear reverse,invert 10s infinite alternate-reverse;
+					// background: white;
+					opacity: .8;
+				}
+				@keyframes invert {
+					0%{
+						filter: invert(0%) ;
+					}
+					100%{
+						filter: invert(100%);
+					}
+				}
+			}
+		}
+		.character-part{
+			position: relative;
+			max-width: 12vw;
+			height: 120vh;
+			.galaxy{
+				background: url('/backgrounds/galaxy_slight.png'),#2f243aec;
+				background-size: 40vw;
+				backdrop-filter: blur(0.1vw);
+				filter: blur(0.1vw);
+				width: 100%;
+				height: 100%;
+				top: 0%;
+				left: 0%;
+				position: absolute;
+			}
+			
+			.model{
+				// max-width: 100%;
+				height: 100vh;
+				transform: translateX(-20vw);
+				position: relative;
+				// object-fit: contain;
+				// scale: 2;
+			}
+		}
+
+		
+	}
+}

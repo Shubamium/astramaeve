@@ -112,6 +112,7 @@ export default function Navigation({}: Props) {
 		},2200)
 	}
 	const closeNav = ()=>{
+		setIsSubOpen(false);
 		setIsSidebarOpen(false);
 		if(videoRef.current){
 			videoRef.current.currentTime = 0

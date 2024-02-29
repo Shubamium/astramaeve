@@ -1,0 +1,51 @@
+.page-title{
+	text-align: center;
+	padding: 2em;
+	background: #232337;
+
+	margin-top: 70px;
+	.text-part{
+		scale: 5;
+		position: relative;
+		z-index: 10;
+		.subtitle{
+			color: white;
+			letter-spacing: 5px;
+			font-size: .3rem;
+			text-shadow: 2px 4px 15px black;
+		}
+		.title{
+			color: #6675FF;
+			text-shadow: 2px 4px 15px black;
+			font-size: 1rem;
+			line-height: 110%;
+			font-family: var(--fontAlt);
+		}
+	}
+
+	position: relative;
+	.decor_diamonds{
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		gap: 4em;
+		top: -20%;
+		left: 0%;
+		width: 100%;
+		scale: .8;
+		opacity: .3;
+		.diamonds{
+			width: 130px;
+			height: 130px;
+			background: #E91084;
+			rotate: 45deg;
+			outline: 2px solid #E91084;
+			outline-offset: 5px;
+			opacity: .9;
+			&.a{
+				scale: .8;
+			}
+		}
+	}
+
+}

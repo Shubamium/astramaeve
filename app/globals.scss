@@ -39,8 +39,12 @@ main{
 	font-size: 1.2rem;
 	transition: all 400ms ease,width 0ms, height 0ms;
 	font-family: var(--fontAlt);
+	cursor: pointer;
 	&:hover{
 		scale: 1.05;
+	}
+	&:active{
+		scale: .9;
 	}
 }
 

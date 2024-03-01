@@ -2,6 +2,8 @@ import React from 'react'
 import './story.scss'
 import PageTitle from '../components/layout/pageTitle/PageTitle'
 import Link from 'next/link'
+import Tower from './Tower'
+import Salvere from './Salvere'
 type Props = {}
 
 export default function Story({}: Props) {
@@ -144,10 +146,10 @@ export default function Story({}: Props) {
 				</figure>
 				<article className="panel right">
 				<div className="emote-top">
-						<img src="./arts/emote_l.png" alt="" />
+						<img src="./arts/emote_r.png" alt="" />
 					</div>
-					<p>Her childhood passed joyfully with a loving family, her grandfather a respected figure heading the Council. </p>
-					<p>However, challenges surfaced when Astra turned 50: <u>her star powers began to manifest</u>, and the accumulation of mana in her body accelerated. </p>
+					<p>The memories of billions of years brought headaches, and the immense mana concentration took a toll on her young body,<strong> confining her to bed for several years.</strong>  </p>
+					<p>Determined to overcome these challenges, Astra embarked on a journey to master the energy within her, delving into <strong>the world of magic.</strong></p>
 				</article>
 			</section>
 
@@ -162,17 +164,20 @@ export default function Story({}: Props) {
 						</div>
 						<div className="story-part">
 							<img src="/arts/chibi_storyb.png" alt="" className='chibi'/>
-							<p>{`Astra's personality holds a tapestry of contradictions. She cherished company but preferred solitude, possessed a profound love for magical experimentation yet displayed laziness to an extreme. `}</p>
+							<p>{`Astra's personality holds a tapestry of contradictions. She cherished company but preferred solitude, possessed a profound love for magical experimentation yet displayed laziness to an extreme. `}</p>
 						</div>
+						
 						<div className="story-part">
 							<img src="/arts/kurukuru.gif" alt="" className='chibi'/>
-							<p>When not immersed in her latest research in the Amethyst Tower, she could be found teaching at Elvedere Academy or indulging in games in her messy room, much to the chagrin of her butler, Alvion, the only other resident of the tower. </p>
+							<p>When not immersed in her latest research in the Amethyst Tower, she could be found teaching at Elvedere Academy or indulging in games in her messy room, much to the chagrin of her butler, Alvion, the only other resident of the tower.</p>
 						</div>
 					</div>
 					<div className="decor-container">
 						<img src="/decors/story_circle.png" alt="" className='story_circle r' />
 					</div>
 			</section>
+			<Tower/>
+			<Salvere/>
 		</main>
 	)
 }

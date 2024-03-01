@@ -42,7 +42,7 @@ export default function Contacts({}: Props) {
 				</div>
 
 				<div className="listcont right-contact">
-				<a href='#' className="contact">
+						<a href='#' className="contact">
 								<span className='contact-content'>
 									<span className='media-type'>DISCORD</span>							
 									<span className='handles'>@handle_sub</span>		

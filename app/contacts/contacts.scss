@@ -1,0 +1,154 @@
+#page_contacts{
+
+	.contact-container{
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr;
+		background: linear-gradient(180deg, rgba(69.06, 87.52, 255, 0.10) 0%, rgba(114, 128, 255, 0.348) 100%);
+		gap: 2em;
+		margin: 5em 0;
+		.center-contact{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			position: relative;
+			.banner{
+				position: relative;
+				margin-top: 5em;
+			}
+			& .banner::before{
+				content:'';
+				position:absolute;
+				top:0%;
+				left:0%;
+				width: 100%;
+				height:100%;
+				content:url('/decors/galaxy_circle.png');
+				scale: 1.1;
+				animation: speen 200s infinite linear;
+				filter: blur(2px);
+			}
+			.maeve-banner{
+				max-width: 100%;
+				border-radius: 100%;
+				border: 2px solid #E91084;
+				
+				position: relative;
+				width: 500px;
+				height: 500px;
+			}
+			.maeve-logo{
+				margin: 0 auto;
+				margin-top: -300px;
+				margin-bottom: -100px;
+				width: 500px;
+				height: 500px;
+				object-fit: contain;
+				scale: .8;
+			}
+			.email{
+				font-size: 2rem;
+				text-align: center;
+				color: #F8AF0F;
+				position: relative;
+				top: 90px;
+				font-family: var(--fontAlt);
+				text-decoration: none;
+				transition: all 500ms ease;
+				&:hover{
+					&:not(strong){
+						color: #E91084;
+
+					}
+				}
+				strong{
+				}
+			}
+			
+		}
+
+		.listcont{
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			&.left-contact{
+				align-items: end;
+				padding-right: 30px;
+			}
+	
+			justify-content: center;
+			.contact{
+			
+				aspect-ratio: 1/1;
+				width: 180px;
+				height: 180px;
+				background: url('/backgrounds/galaxy_slight.png'), linear-gradient(137deg, #2735b0af 0%, rgba(113, 127, 255, 0) 100%);
+				text-decoration: none;
+				rotate: 45deg;
+				outline: 2px solid #717FFF;
+				transition: all 450ms ease;
+				z-index: 10;
+				&:hover{
+					background:url('/backgrounds/galaxy_slight.png'), linear-gradient(137deg, #E91084 0%, rgba(113, 127, 255, 0) 100%);
+					outline-offset: 15px;
+					outline-width: 5px;
+					outline-color: #F8AF0F;
+					.handles{
+						text-shadow: 2px 2px 5px black;
+					}
+					
+				}
+				.contact-content{
+					scale: 1.2;
+					height: 100%;
+					rotate: -45deg;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					position: relative;
+					// top: -210px;
+					transform: translateY(-20%);
+					text-decoration: none;
+					text-align: center;
+				}
+
+				&.offset{
+					left: -200px;
+					position: relative;
+				}
+				.handles{
+					font-size: 1rem;
+					color: white;
+					font-weight: bold;
+					font-family: var(--fontMain);
+					letter-spacing: 2px;
+					// padding-bottom: 2em;
+				}
+				.media-type{
+					color: #717FFF;
+					font-weight: bold;
+					font-size: 1.5rem;
+					text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.635);
+					text-decoration: none;
+					font-size: 1.8rem;
+					text-align: center;
+					font-family: var(--fontAlt);
+				}
+				svg{
+					width: 100px;
+					height: 100px;
+					filter: drop-shadow( 2px 5px rgba(0, 0, 0, 0.635));
+
+					color: black;
+					opacity: .5;
+				}
+				
+			}		
+			&.right-contact{
+				.offset{
+					left: 200px;
+				}
+			}
+		}
+	}
+}

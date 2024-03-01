@@ -9,7 +9,7 @@ export default function PageTitle({subtitle,title}: Props) {
 	return (
 		<div className='page-title'>
 			<div className="text-part">
-				<p className='subtitle'> {'⬘'} {subtitle} {'⬘'} </p>
+				<p className='subtitle'> {'♢⬘'} {subtitle} {'⬘♢'} </p>
 				<h2 className='title'>✦ {title} ✦</h2>
 			</div>
 			<div className="decor_diamonds">

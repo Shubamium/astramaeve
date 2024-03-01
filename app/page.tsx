@@ -23,8 +23,8 @@ export default function Home() {
 							<path d="M386.878 45.1618C500.204 125.73 506.08 217.39 425.512 330.716C344.944 444.043 208.442 536.121 95.1152 455.553C-18.2112 374.985 -26.5938 224.172 53.9741 110.846C134.542 -2.4804 273.551 -35.4062 386.878 45.1618Z" fill="url(#paint0_linear_134_811)"/>
 							<defs>
 							<linearGradient id="paint0_linear_134_811" x1="-2.83391" y1="91.7089" x2="407.557" y2="383.471" gradientUnits="userSpaceOnUse">
-								<stop stop-color="#F3F6FF"/>
-								<stop offset="1" stop-color="#A4BAFF" stop-opacity="0.44"/>
+								<stop stopColor="#F3F6FF"/>
+								<stop offset="1" stopColor="#A4BAFF" stop-opacity="0.44"/>
 							</linearGradient>
 							</defs>
 						</svg>

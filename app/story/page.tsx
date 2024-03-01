@@ -130,6 +130,49 @@ export default function Story({}: Props) {
 				<p>In her new environment, Astra thrived. The vibrant colors, the bustling life, and the constant interactions with others fulfilled her long-standing desire for companionship. The voices of distant stars in her mind criticized her happiness in being reincarnated as an inferior being, but Astra remained content. </p>
 				</div>
 			</section>
+
+			<section className="childhood">
+				<article className="panel left">
+					<div className="emote-top">
+						<img src="./arts/emote_l.png" alt="" />
+					</div>
+					<p>Her childhood passed joyfully with a loving family, her grandfather a respected figure heading the Council. </p>
+					<p>However, challenges surfaced when Astra turned 50: <u>her star powers began to manifest</u>, and the accumulation of mana in her body accelerated. </p>
+				</article>
+				<figure>
+					<img src="./arts/chibi_childhood.png" alt="" className='astra-smile' />
+				</figure>
+				<article className="panel right">
+				<div className="emote-top">
+						<img src="./arts/emote_l.png" alt="" />
+					</div>
+					<p>Her childhood passed joyfully with a loving family, her grandfather a respected figure heading the Council. </p>
+					<p>However, challenges surfaced when Astra turned 50: <u>her star powers began to manifest</u>, and the accumulation of mana in her body accelerated. </p>
+				</article>
+			</section>
+
+			<section className="story-three">
+					<div className="decor-container">
+						<img src="/decors/story_circle.png" alt="" className='story_circle l ' />
+					</div>
+					<div className="story-container">
+						<div className="story-part">
+							<img src="/arts/chibi_storya.png" alt="" className='chibi'/>
+							<p>{`Despite her grandfather's aspirations for her to enter politics, Astra's heart remained devoted to magic. Instead of following the expected political path, she became renowned as the most powerful mage of her time, earning the title of "Archmage" and claiming ownership of her tower, The Amethyst Tower. `}</p>
+						</div>
+						<div className="story-part">
+							<img src="/arts/chibi_storyb.png" alt="" className='chibi'/>
+							<p>{`Astra's personality holds a tapestry of contradictions. She cherished company but preferred solitude, possessed a profound love for magical experimentation yet displayed laziness to an extreme. `}</p>
+						</div>
+						<div className="story-part">
+							<img src="/arts/kurukuru.gif" alt="" className='chibi'/>
+							<p>When not immersed in her latest research in the Amethyst Tower, she could be found teaching at Elvedere Academy or indulging in games in her messy room, much to the chagrin of her butler, Alvion, the only other resident of the tower. </p>
+						</div>
+					</div>
+					<div className="decor-container">
+						<img src="/decors/story_circle.png" alt="" className='story_circle r' />
+					</div>
+			</section>
 		</main>
 	)
 }

@@ -211,6 +211,12 @@
 		article{
 			max-width: 60%;
 			margin: 0 auto;
+			p{
+
+			}
+			strong{
+				color: #FFC738;
+			}
 		}
 	}
 	.story_two{
@@ -219,6 +225,7 @@
 		text-align: center;
 		background-position: bottom;
 		background-attachment: fixed;
+		box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.203);
 		.content{
 			max-width: 800px;
 			text-align: center;
@@ -232,8 +239,124 @@
 				color:white;
 				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
 				margin-bottom: 2em;
+				letter-spacing: 2px;
 				
 			}
 		}
 	}
+
+	.childhood{
+		max-width: 1200px;
+		margin: 200px auto;
+		display: grid;
+		grid-template-columns: 1fr 1.25fr 1fr;
+		align-items: center;
+
+		.emote-top{
+			// max-width: 100%;
+			img{
+				width:200px;
+				margin-top: -100px;	
+			}
+		}
+		.panel{
+			background: linear-gradient(180deg, #caa1fd9c 0%, #210f2582 100%);
+			border: 2px solid #FFC738;
+			color: white;
+			padding: 2em;
+			padding-bottom:50px;
+			p{
+				// font-size: ;
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.661);
+				// margin-top: -100px;
+				margin-bottom: 2em;
+				letter-spacing: 1px;
+			}
+		}
+
+		figure{
+			padding: 2em;
+			position: relative;
+			&::before{
+				content:'';
+				position:absolute;
+				top:0%;
+				left:0%;
+				width:100%;
+				height:100%;
+				outline: 4px solid #9833FD;
+				scale: .5;
+				z-index: -2;
+				animation: speen 10s infinite linear reverse;
+				// rotate: 45deg;
+			}
+		}
+		figure img{
+			max-width: 100%;
+			max-height: 100%;
+			filter: drop-shadow(2px 2px 4px #9833FD);
+		}
+	}
+
+	.story-three{
+		min-height: 2500px;
+		// background: red;
+		height: 2000px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: nowrap;
+		// justify-content: stretch;
+		align-items: stretch;
+
+		.story-container{
+			width: 100%;
+
+			.story-part{
+				max-width: 800px;
+				margin:  100px auto;
+				color: #939ADB;
+				mix-blend-mode: 20px;
+				margin-bottom: 500px;
+				padding: .55em 2em;
+				text-align: center;
+
+				.chibi{
+					width: 300px;
+				}
+				p{
+					background: linear-gradient(90deg,transparent 0%,#a63cf279 20%, #e63cf279 50%,  #a63cf279 80%, transparent 100%);
+					backdrop-filter: blur(0vw);
+					padding: .6em 3em;
+					letter-spacing: 1px;
+					text-shadow: 2px 2px 3px #6e70ff79,2px 2px 3px rgba(255, 255, 255, 0.278);
+					color: white;
+				}
+			}
+		}
+		.decor-container{
+			position: relative;
+			max-width: 100px;
+			height: 100%;
+			.story_circle{
+				position: sticky;
+				top: 5%;
+				left: 0%;
+				animation: speen 150s infinite linear;
+				width: 800px;
+				mix-blend-mode: lighten;
+				// opacity: .9;
+				filter: drop-shadow(0px 0px 15px  #9833FD);
+				&.l{
+					// transform: translateY(-50%);
+					// left: -50%;
+					translate: -50%;
+					animation-direction: reverse;
+				}
+				&.r{
+					translate: -30%;
+				}
+			}
+		}
+	}
+
 }

@@ -16,7 +16,7 @@ export default function Story({}: Props) {
 							<Link href={'#salvere'} className='btn btn-about-nav alt'> ✦ SALVERE</Link>
 						</div>
 						<p className='story-text'>
-							{`Astra's journey began with a profound sense of disorientation as she opened her eyes for the first time. Instead of the expected demise, she found herself alive after what should have been the catastrophic end of a star's life. `}
+							{`This should be replaced with general description about this page, Astra's journey began with a profound sense of disorientation as she opened her eyes for the first time. Instead of the expected demise, she found herself alive after what should have been the catastrophic end of a star's life. `}
 						</p>
 
 						<div className="who-is">
@@ -91,7 +91,7 @@ export default function Story({}: Props) {
 						<img src="/arts/character_large.png" alt="" className='character-large' />
 				</article>
 			</section>
-			<section className="story_one">
+			<section className="story_one" id='story_one'>
 				<div className="confine">
 					<article className='story-part'>
 						<div className="story-heading">
@@ -108,6 +108,26 @@ export default function Story({}: Props) {
 					<figure>
 						<img src="" alt="" />
 					</figure>
+				</div>
+			</section>
+
+			<section className='companionship'>
+					<figure className='companions'>
+						<img src="./decors/companionship_decor.png" alt="" className='companion-decor' />
+						<img src="./arts/talking.gif" alt="" className='companion-gif' />
+					</figure>
+					<article>
+						<p>Yet Astra was different. Despite the vastness of her existence, she <strong>yearned for companionship</strong> in the cosmos. Her life as a star felt mundane and pitiful, with her only solace being the observation of life on distant worlds. </p>
+					</article>
+			</section>
+
+			<section className='story_two'>
+				<div className="content">
+				<h2>◈ STORY - 2 ◈</h2>
+				<p>
+					Unexpectedly, the end of her celestial existence ushered in a new opportunity and a new life, now named Astralias, a member of the <strong>Noble Mæve Clan</strong> in the <strong>kingdom of Salvere</strong>. 
+				</p>
+				<p>In her new environment, Astra thrived. The vibrant colors, the bustling life, and the constant interactions with others fulfilled her long-standing desire for companionship. The voices of distant stars in her mind criticized her happiness in being reincarnated as an inferior being, but Astra remained content. </p>
 				</div>
 			</section>
 		</main>

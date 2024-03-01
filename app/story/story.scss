@@ -183,4 +183,57 @@
 			}			
 		}
 	}
+
+	.companionship{
+		text-align: center;
+		color:white;
+		max-width: 1200px;
+		margin: 200px auto;
+		color: #939ADB;
+		text-shadow: 2px 2px 3px #c336ff79;
+		
+		.companions{
+			position: relative;
+			.companion-decor{
+				position: absolute;
+				width: 100%;
+				left: 0%;
+				top: 0%;
+				height: 100%;
+				scale: .7;
+			}
+			.companion-gif{
+				max-width:300px;
+				margin-bottom: 5%;
+				scale: 1.3;
+			}
+		}
+		article{
+			max-width: 60%;
+			margin: 0 auto;
+		}
+	}
+	.story_two{
+		background: url('/backgrounds/kingdom-bg.png');
+		background-size: cover;
+		text-align: center;
+		background-position: bottom;
+		background-attachment: fixed;
+		.content{
+			max-width: 800px;
+			text-align: center;
+			margin: 0 auto;
+			padding: 50px 0;
+			h2{
+				color: #FFC738;
+				font-size: 2.5rem;
+			}
+			p{
+				color:white;
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+				margin-bottom: 2em;
+				
+			}
+		}
+	}
 }

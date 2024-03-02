@@ -6,9 +6,6 @@ type Props = {}
 import 'swiper/css';
 import { Pagination,Navigation } from 'swiper/modules'
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { FaCartArrowDown } from 'react-icons/fa6'
-import { GiShoppingCart } from 'react-icons/gi'
 import { CgShoppingCart } from 'react-icons/cg'
 
 export default function ItemListing({}: Props) {
@@ -30,22 +27,30 @@ export default function ItemListing({}: Props) {
 				// centeredSlides={true}
 			>
 				<SwiperSlide className="item">
+					<div className="item-price">
+							<p>$4</p>
+					</div>
+					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
 					<div className="item-image">
 						<img src="" alt="" />
 					</div>
 					<div className="item-info">
-						<p className='item-title'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
+						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
 						<div className="action">
 							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
 						</div>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className="item">
+					<div className="item-price">
+							<p>$4</p>
+					</div>
+					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
 					<div className="item-image">
 						<img src="" alt="" />
 					</div>
 					<div className="item-info">
-						<p className='item-title'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
+						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
 						<div className="action">
 							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
 						</div>
@@ -53,11 +58,15 @@ export default function ItemListing({}: Props) {
 				</SwiperSlide>
 			
 				<SwiperSlide className="item">
+					<div className="item-price">
+							<p>$4</p>
+					</div>
+					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
 					<div className="item-image">
 						<img src="" alt="" />
 					</div>
 					<div className="item-info">
-						<p className='item-title'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
+						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
 						<div className="action">
 							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
 						</div>
@@ -65,11 +74,15 @@ export default function ItemListing({}: Props) {
 				</SwiperSlide>
 			
 				<SwiperSlide className="item">
+					<div className="item-price">
+							<p>$4</p>
+					</div>
+					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
 					<div className="item-image">
 						<img src="" alt="" />
 					</div>
 					<div className="item-info">
-						<p className='item-title'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
+						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
 						<div className="action">
 							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
 						</div>
@@ -77,40 +90,21 @@ export default function ItemListing({}: Props) {
 				</SwiperSlide>
 			
 				<SwiperSlide className="item">
+					<div className="item-price">
+							<p>$4</p>
+					</div>
+					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
 					<div className="item-image">
 						<img src="" alt="" />
 					</div>
 					<div className="item-info">
-						<p className='item-title'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
+						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
 						<div className="action">
 							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
 						</div>
 					</div>
 				</SwiperSlide>
 			
-				<SwiperSlide className="item">
-					<div className="item-image">
-						<img src="" alt="" />
-					</div>
-					<div className="item-info">
-						<p className='item-title'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
-						<div className="action">
-							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
-						</div>
-					</div>
-				</SwiperSlide>
-			
-				<SwiperSlide className="item">
-					<div className="item-image">
-						<img src="" alt="" />
-					</div>
-					<div className="item-info">
-						<p className='item-title'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
-						<div className="action">
-							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
-						</div>
-					</div>
-				</SwiperSlide>
 			
 		</Swiper>
 		</div>

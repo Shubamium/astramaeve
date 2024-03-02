@@ -1,3 +1,58 @@
 #page_shop{
 	padding-bottom: 400px;
+
+	.shop-guidelines{
+		background: url('/backgrounds/tower-bg.png');
+		background-size: contain;
+		background-attachment: fixed;
+
+		// display: flex;
+		// justify-content: center;
+		margin: 1em 0;
+		.confine{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			justify-items: center;
+			gap: 1em;
+			width: 100%;
+			align-content: center;
+			max-width: min(1200px, 80%);
+			margin: 0px auto;
+			padding: 100px 0;
+			.terms{
+				max-width: 320px;
+				background: linear-gradient(180deg, white 0%, rgba(172.13, 250.03, 255, 0.49) 100%);
+				padding: 1.25em 1em;
+				border-radius: 1em;
+				color: #A830E0;
+				text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.446);
+				position: relative;
+
+				box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.234);
+				.decor{
+					position:absolute;
+					top:0%;
+					left:0%;
+					// transform: translate(-50%);
+				}
+				.decor_star{
+					left: -5%;
+					top: -12%;
+					scale: .7;
+					animation: speen 20s infinite linear;
+				}
+				.decor_logo{
+					// width: 10px;
+					// height: 10px;
+					// rotate: 20deg;
+					top: -30%;
+					left: initial;
+					right: -15%;
+					scale: .6;
+				}
+			}
+		}
+		// align-items: center;
+
+	}
 }

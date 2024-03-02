@@ -10,7 +10,7 @@ export default function page({}: Props) {
 	return (
 		<main id="page_commission">
 			<PageTitle
-				title='Shop'
+				title='Commission'
 				subtitle='item listing and commission info'
 			/>
 			<ShopNavigation active="commission"/>

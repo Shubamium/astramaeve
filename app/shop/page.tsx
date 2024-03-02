@@ -19,7 +19,26 @@ export default function page({}: Props) {
 				title='Guidelines'
 				description={`Don't forget to refer to my guidelines every time you consider making a purchase. You might find additional ones tucked away within the shop listings! It's always a good idea to double-check before making a decision.`}
 			/>
-			<section className='shop-guidelines'></section>
+			<section className='shop-guidelines'>
+				<div className="confine">
+
+					<div className="terms">
+						<img src="/decors/mini_logo.png" alt="" className='decor decor_logo' />
+						<img src="/decors/gold-star.png" alt="" className='decor decor_star' />
+						<p>Unauthorized redistribution, claiming, or modification of my creations is strictly prohibited unless stated otherwise in the terms of use of said item. Please respect the originality and integrity of the work.</p>
+					</div>
+					<div className="terms">
+						<img src="/decors/mini_logo.png" alt="" className='decor decor_logo' />
+						<img src="/decors/gold-star.png" alt="" className='decor decor_star' />
+						<p>Unauthorized redistribution, claiming, or modification of my creations is strictly prohibited unless stated otherwise in the terms of use of said item. Please respect the originality and integrity of the work.</p>
+					</div>
+					<div className="terms">
+						<img src="/decors/mini_logo.png" alt="" className='decor decor_logo' />
+						<img src="/decors/gold-star.png" alt="" className='decor decor_star' />
+						<p>Unauthorized redistribution, claiming, or modification of my creations is strictly prohibited unless stated otherwise in the terms of use of said item. Please respect the originality and integrity of the work.</p>
+					</div>
+				</div>
+			</section>
 		</main>
 	)
 }

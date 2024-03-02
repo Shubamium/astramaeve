@@ -1,0 +1,81 @@
+#page_art{
+	// min-height: 4000px;
+	padding-bottom: 300px;
+	.reference-art{
+		background: linear-gradient(180deg, #9833FD 15%, #2F299D 100%),url('/backgrounds/shatter_slight.png');
+		display: flex;
+		// justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		// padding: 2em 0;
+		margin: 100px 0;
+		.ref-sheet{
+			max-width: 1200px;
+			scale: 1.2;
+		}
+		.credits{
+			background: #7499F9;
+			border: 3px solid #FFC851;
+			border-radius: 3em;
+			
+			margin: -20px;
+			scale: 1.2;
+			transform: translateY(50px);
+			a{
+				color:white;
+				text-decoration: none;
+				font-size: 1.5rem;
+				padding: .5em 2em;
+				span{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+
+	.reference-folder{
+		background: #5c71fa52;
+		backdrop-filter: blur(10px);
+		display: flex;
+		justify-content: center;
+		// margin: 2em;
+		margin-top: 400px;
+		text-align: center;
+		.reference{
+			max-width: 400px;
+			padding: 2em;
+			border: 2px solid #FFC851;
+			scale: 1.4;
+			.reference-head{
+				max-width: 100%;
+				border-radius: 5em;
+				margin-top: -100px;
+				box-shadow: 2px 2px 15px #9833FD;
+			}
+			h2{
+				color: #D87CFF;
+				font-weight: 400;
+				letter-spacing: 2px;
+				text-shadow: 2px 2px 5px #9833FD;
+				margin-top: .25em;
+			}
+			p{
+				color: #7499F9;
+				font-size: .8rem;
+				text-shadow: 2px 2px 5px #9833FD;
+
+				br{
+					// padding-bottom: 1em;
+				}
+			}
+			.btn-styled{
+				margin: 1em auto;
+				display: block;
+				// max-width: 80%;
+				width: max-content;
+				align-items: center;
+			}
+		}
+	}
+}

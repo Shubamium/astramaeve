@@ -31,8 +31,16 @@ The materials inside the folder are for artworks and fanart only. </p>
 					
 				</section>
 
-				<GalleryDisplayer/>
-
+				<GalleryDisplayer 
+					title='Gallery'
+					description='These artworks have been commissioned by Astra Maeve and are for her exclusive use.'
+					id='gallery'
+					/>
+				<GalleryDisplayer 
+					title='Fanart'
+					id='fanart'
+					description='These artworks have been commissioned by Astra Maeve and are for her exclusive use.'
+				/>
 		</main>
 	)
 }

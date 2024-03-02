@@ -2,6 +2,7 @@ import React from 'react'
 import PageTitle from '../components/layout/pageTitle/PageTitle'
 import './stream.scss'
 import { FaMailBulk } from 'react-icons/fa'
+import Credit from './credit/Credit'
 type Props = {}
 
 export default function page({}: Props) {
@@ -198,9 +199,7 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 				</div>
 			</section>
 
-			<section className='credits' id="credits">
-
-			</section>
+			<Credit/>
 		</main>
 	)
 }

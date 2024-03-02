@@ -1,0 +1,27 @@
+.shop-heading{
+
+	.title-part{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 2em;
+		h2{
+			font-size: 3.5rem;
+			color: #F8AF0F;
+		}
+		hr{
+			background: #F8AF0F;
+			height: 2px;
+			width: 200px;
+		}
+	}
+	p{
+		color: #939ADB;
+		font-size: 1rem;
+		max-width: min(800px,80%);
+		text-align: center;
+		margin: 0 auto;
+	}
+}

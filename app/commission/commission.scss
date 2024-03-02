@@ -1,3 +1,69 @@
 #page_commission{
 	
+	padding-bottom: 400px;
+
+	
+	.comms-guidelines{
+		
+		.confine{
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			margin: 0 auto;
+			max-width: 1200px;
+			margin-top: 80px;
+		}
+
+		.guidelines-list{
+			// max-width: 100%;
+			// display: flex;
+			// justify-content: center;
+			display: flex;
+			flex-direction: column;
+			gap: 2em;
+			.guideline{
+				background: linear-gradient(180deg, rgba(0, 195, 255, 0.928) 0%, rgba(255, 188, 45, 0.928) 100%), url('/backgrounds/galaxy_slight.png');
+				background-blend-mode: screen;
+				padding: .85em 1em;
+				border-radius: 2em;
+				color: #3340B7;
+				display: grid;
+				grid-template-columns: 40px 1fr;
+				transition: all 550ms ease;
+				gap: 2em;
+				max-height: 100%;
+				.icon{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					rotate: 10deg;
+					img{
+						scale: 3;
+						max-width: 100%;
+					}
+				}
+			}
+		}
+		.comms-nav{
+			// display: ;
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+
+			padding: .25em 2em;
+			
+			.comms-nav-item{
+				background: #8d98fa86;
+				color: #D87CFF;
+				backdrop-filter: blur(5px);
+				padding: .25em 1em;
+				box-shadow: 0px 0px 15px #d87cff5d;
+				&.active{
+					background: #6675FF;
+					color: white;
+					scale: 1.05;
+				}
+			}
+			
+		}
+	}
 }

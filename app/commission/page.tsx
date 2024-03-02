@@ -4,6 +4,7 @@ import './commission.scss'
 import ShopNavigation from '../shop/shopNavigation/ShopNavigation'
 import ItemListing from '../shop/itemListing/ItemListing'
 import ShopHeading from '../shop/shopHeading/ShopHeading'
+import CommissionGuidelines from './commissionGuidelines/CommissionGuidelines'
 type Props = {}
 
 export default function page({}: Props) {
@@ -17,9 +18,11 @@ export default function page({}: Props) {
 			<ItemListing/>
 			<ShopHeading
 				title='Guidelines'
-				description={`Don't forget to refer to my guidelines every time you consider making a purchase. You might find additional ones tucked away within the shop listings! It's always a good idea to double-check before making a decision.`}
+				description={`
+				By commissioning me, you acknowledge and agree to these terms. Please address any concerns or seek clarification before proceeding.
+				I am excited about creating a unique and beautiful piece for you!`}
 			/>
-			<section className='comms-guidelines'></section>
+			<CommissionGuidelines/>
 		</main>
 	)
 }

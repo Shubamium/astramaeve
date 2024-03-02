@@ -1,0 +1,18 @@
+.shop-nav{
+	display: flex;
+	justify-content: center;
+	gap: .25em 1em;
+	margin: 50px 0;
+
+
+	.btn-shop-nav{
+		background: #6675ff30;
+		padding: .25em 1em;
+		color: #D87CFF;
+		font-weight: bold;
+		&.active{
+			background: #6675FF;
+			color: white;
+		}
+	}
+}

@@ -54,6 +54,9 @@ const subLinks = {
 		},{
 			title:'Fandom',
 			link:'/stream#fandom',
+		},{
+			title:'Collab',
+			link:'/stream#collabs',
 		},
 	],
 	'shop':[

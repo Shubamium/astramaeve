@@ -1,0 +1,93 @@
+.item-listing{
+	background: url('/backgrounds/galaxy_subtle.png'),linear-gradient(180deg, #9833fdbb 15%, #2F299D 100%);
+	height: 500px;
+	backdrop-filter: blur(5px);
+	padding: 2em;
+	display: flex;
+	padding-left: 10%;
+	// .item{
+	// 	flex-shrink: 0;
+	// 	background: linear-gradient(180deg, white 0%, white 71%, rgba(255, 255, 255, 0.58) 100%);
+	// 	// height: 80%;
+	// 	// width: 300px;
+	// 	// height: 100%;
+	// 	width: 300px;
+	// 	// height: 500px;
+	// 	height: 100%;
+	// }
+	// .item-container{
+	// 	// background: red;
+	
+	// 	max-width: 100%;
+	// 	margin: 0 auto;
+	// 	.simplebar-content{
+	// 		display: flex;
+	// 		align-items: center;
+	// 		gap: 2.25em;
+	// 		height: 100%
+	// 	}
+	// 	.simplebar-track{
+
+	// 		height: 15px;
+	// 		cursor: pointer;
+	// 	}
+	// 	.simplebar-track.simplebar-horizontal .simplebar-scrollbar{
+	// 		&::before{
+	// 			background: linear-gradient(90deg, #34F9FA 0% ,#0547ee 100%);
+	// 			box-shadow: 0px 0px 4px black;
+	// 		}
+	// 	}
+	// }
+	
+	.item-list{
+		width: 100%;
+		// background: red;
+		padding: 2em 0;
+		mask: linear-gradient(to left,transparent 0%, white 10%, white 95%, transparent 100%);
+		.item{
+			width: 400px;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.959) 0%, rgba(255, 255, 255, 0.859) 71%, rgba(255, 255, 255, 0.58) 100%);
+			border-radius: 2em;
+			box-shadow:0px 0px 5px black;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid white;
+			transition: all 250ms ease;
+			&:hover{
+				scale: 1.05;
+			}
+			.item-image{
+				height: 200%;
+				flex-basis: 2;
+				border-radius: 2em 2em 0 0;
+				background: rgb(59, 57, 103);
+				overflow: hidden;
+				width: 100%;
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+			.item-info{
+				height: 100%;
+				flex-basis: 1;
+
+				.item-title{
+					color: #8c1c87;
+					font-weight: bold;
+				}
+				display: flex;
+				justify-content: space-between;
+				padding: .25em 1em;
+				flex-direction: column;
+				.action{
+					display: flex;
+					justify-content: flex-end;
+					width: 100%;
+					padding-bottom: .25em;
+				}
+			}
+		}
+	}
+}

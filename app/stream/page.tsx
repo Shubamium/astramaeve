@@ -3,6 +3,8 @@ import PageTitle from '../components/layout/pageTitle/PageTitle'
 import './stream.scss'
 import { FaMailBulk } from 'react-icons/fa'
 import Credit from './credit/Credit'
+import Fandom from './fandom/Fandom'
+import { FaArrowRight, FaDiscord, FaTwitter } from 'react-icons/fa6'
 type Props = {}
 
 export default function page({}: Props) {
@@ -200,6 +202,35 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 			</section>
 
 			<Credit/>
+
+			<Fandom/>
+	
+			<section className="collabs" id="collabs">
+
+				<div className="art-part">
+					<img src="/arts/collab-art.png" alt="" className='collab-art' />
+				</div>
+				<div className="collab-text">
+					<p className='description'>If you would like to collab, please feel free to reach us via Email, Twitter DM or Discord! <br /> <br /> You can consult the current list of games that are available for collabs: </p>
+				</div>
+				<div className="action">
+					<div className="collab-links">
+							<a href='#' target='_blank' className="btn collab-link">
+									<FaMailBulk/>
+							</a>
+							<a href='#' target='_blank' className="btn collab-link">
+									<FaDiscord/>
+							</a>
+							<a href='#' target='_blank' className="btn collab-link">
+									<FaTwitter/>
+							</a>
+
+					</div>
+					<a href='https://docs.google.com/document/d/19heJ2GMrCj-LszUBaOi3ZGqm6Tva8y669ZnDs_zeXuk/edit?usp=sharing' target='_blank' className="btn btn-styled">
+							✦ Game List <FaArrowRight/>
+					</a>
+				</div>
+			</section>
 		</main>
 	)
 }

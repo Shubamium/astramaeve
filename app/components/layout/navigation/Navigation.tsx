@@ -147,7 +147,7 @@ export default function Navigation({}: Props) {
 				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('art')}} className='sidebar-link' href={'/art'}><span>✵</span>ART</Link>
 				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('stream')}} className='sidebar-link' href={'/stream'}><span>✵</span>STREAM</Link>
 				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('shop')}} className='sidebar-link' href={'/shop'}><span>✵</span>SHOP</Link>
-				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('terms')}} className='sidebar-link' href={'/terms'}><span>✵</span>TERMS</Link>
+				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('terms')}} className='sidebar-link' href={'/terms'}><span>✵</span>RULES</Link>
 				<Link onClick={closeNav}  onMouseEnter={()=>{openSub('contacts')}} className='sidebar-link' href={'/contacts'}><span>✵</span>CONTACTS</Link>
 			</div>
 			<video src="/video/shatter1.webm" muted ref={videoRef} className='decor_shatter' playsInline></video>

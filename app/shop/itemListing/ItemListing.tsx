@@ -3,9 +3,8 @@ import React from 'react'
 import './itemListing.scss'
 import {Swiper, SwiperSlide} from 'swiper/react'
 type Props = {}
-import 'swiper/css';
+
 import { Pagination,Navigation } from 'swiper/modules'
-import 'swiper/css/pagination';
 import { CgShoppingCart } from 'react-icons/cg'
 
 export default function ItemListing({}: Props) {

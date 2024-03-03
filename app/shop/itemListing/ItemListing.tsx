@@ -2,14 +2,19 @@
 import React from 'react'
 import './itemListing.scss'
 import {Swiper, SwiperSlide} from 'swiper/react'
-type Props = {}
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+type Props = {
+	items:itemList[]
+}
 import { Pagination,Navigation } from 'swiper/modules'
 import { CgShoppingCart } from 'react-icons/cg'
+import { itemList } from '../page';
+import { urlFor } from '@/db/client';
 
-export default function ItemListing({}: Props) {
+export default function ItemListing({items}: Props) {
+
 	return (
 		<div className="item-listing">
 			<Swiper   
@@ -28,85 +33,25 @@ export default function ItemListing({}: Props) {
 				spaceBetween={30}
 				// centeredSlides={true}
 			>
-				<SwiperSlide className="item">
-					<div className="item-price">
-							<p>$4</p>
-					</div>
-					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
-					<div className="item-image">
-						<img src="" alt="" />
-					</div>
-					<div className="item-info">
-						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
-						<div className="action">
-							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
-						</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className="item">
-					<div className="item-price">
-							<p>$4</p>
-					</div>
-					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
-					<div className="item-image">
-						<img src="" alt="" />
-					</div>
-					<div className="item-info">
-						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
-						<div className="action">
-							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
-						</div>
-					</div>
-				</SwiperSlide>
-			
-				<SwiperSlide className="item">
-					<div className="item-price">
-							<p>$4</p>
-					</div>
-					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
-					<div className="item-image">
-						<img src="" alt="" />
-					</div>
-					<div className="item-info">
-						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
-						<div className="action">
-							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
-						</div>
-					</div>
-				</SwiperSlide>
-			
-				<SwiperSlide className="item">
-					<div className="item-price">
-							<p>$4</p>
-					</div>
-					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
-					<div className="item-image">
-						<img src="" alt="" />
-					</div>
-					<div className="item-info">
-						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
-						<div className="action">
-							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
-						</div>
-					</div>
-				</SwiperSlide>
-			
-				<SwiperSlide className="item">
-					<div className="item-price">
-							<p>$4</p>
-					</div>
-					<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
-					<div className="item-image">
-						<img src="" alt="" />
-					</div>
-					<div className="item-info">
-						<p className='item-title ni'>Sleepy Mushroom Hype Cup for Twitch and Youtube - Cute jar compatible with StreamElements</p>
-						<div className="action">
-							<a href="#" target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
-						</div>
-					</div>
-				</SwiperSlide>
-			
+				{items.map((item,index)=>{
+					return (
+						<SwiperSlide className="item" key={item._id}>
+							<div className="item-price">
+									<p>{item.price}</p>
+							</div>
+							<img src="/decors/mini_logo.png" alt="" className='decor_mini ni' />
+							<div className="item-image">
+								<img src={urlFor(item.image).url()} alt="" />
+							</div>
+							<div className="item-info">
+								<p className='item-title ni'>{item.title}</p>
+								<div className="action">
+									<a href={item.buy_link} target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
+								</div>
+							</div>
+						</SwiperSlide>
+					)
+				})}
 			
 		</Swiper>
 		</div>

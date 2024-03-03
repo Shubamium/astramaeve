@@ -5,9 +5,21 @@ import ShopNavigation from '../shop/shopNavigation/ShopNavigation'
 import ItemListing from '../shop/itemListing/ItemListing'
 import ShopHeading from '../shop/shopHeading/ShopHeading'
 import CommissionGuidelines from './commissionGuidelines/CommissionGuidelines'
+import { itemList } from '../shop/page'
+import { fetchData } from '@/db/client'
 type Props = {}
 
-export default function page({}: Props) {
+export default async function page({}: Props) {
+	const commissionData = await fetchData<itemList[]>(`
+	*[_type == 'commission'] {
+		_id,
+		title,
+		price,
+		buy_link,
+		image
+	}
+`);
+
 	return (
 		<main id="page_commission">
 			<PageTitle
@@ -15,7 +27,9 @@ export default function page({}: Props) {
 				subtitle='item listing and commission info'
 			/>
 			<ShopNavigation active="commission"/>
-			<ItemListing/>
+			<ItemListing
+				items={commissionData}
+			/>
 			<ShopHeading
 				title='Guidelines'
 				description={`

@@ -4,9 +4,43 @@ import PageTitle from '../components/layout/pageTitle/PageTitle'
 import './art.scss'
 import Link from 'next/link'
 import GalleryDisplayer from '../components/galleryDisplayer/GalleryDisplayer'
+import { fetchData } from '@/db/client'
 type Props = {}
 
-export default function page({}: Props) {
+export type galleryData = {
+	_id:string,
+	category_name:string,
+	images:{
+		artist:string,
+		artist_link:string,
+		image:any,
+	}[]	
+}
+export default async function page({}: Props) {
+	const galleryArt = await fetchData<galleryData[]>(`
+	*[_type == 'gallery'] {
+		_id,
+		category_name,
+		'images': image_list[] {
+			artist,
+			artist_link,
+			image
+		}
+	}
+	`)
+	const fanart = await fetchData<galleryData[]>(`
+	*[_type == 'fanart'] {
+		_id,
+		category_name,
+		'images': image_list[] {
+			artist,
+			artist_link,
+			image
+		}
+	}
+	`)
+
+	console.log(galleryArt)
 	return (
 		<main id='page_art'>
 				<PageTitle subtitle='gallery of illustrations' title='ART'></PageTitle>
@@ -35,11 +69,13 @@ The materials inside the folder are for artworks and fanart only. </p>
 					title='Gallery'
 					description='These artworks have been commissioned by Astra Maeve and are for her exclusive use.'
 					id='gallery'
+					galleryData={galleryArt}
 					/>
 				<GalleryDisplayer 
 					title='Fanart'
 					id='fanart'
 					description='These artworks have been commissioned by Astra Maeve and are for her exclusive use.'
+					galleryData={fanart}
 				/>
 		</main>
 	)

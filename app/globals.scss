@@ -52,10 +52,13 @@ main{
 .btn-styled{
 	background: linear-gradient(178deg, rgba(0, 25.50, 255, 0.39) 0%, rgba(161.80, 117.94, 255, 0) 100%);
 	color: white;
-
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	padding: .25em 1em;
 	border-radius: 2em;
 	border: 1px solid white;
+	gap: .25em;
 }
 
 .decor_background-circle{

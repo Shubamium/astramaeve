@@ -4,10 +4,27 @@ import './stream.scss'
 import { FaMailBulk } from 'react-icons/fa'
 import Credit from './credit/Credit'
 import Fandom from './fandom/Fandom'
-import { FaArrowRight, FaDiscord, FaTwitter } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowRight, FaDiscord, FaTwitter } from 'react-icons/fa6'
+import { fetchData, urlFor } from '@/db/client'
+import { BsArrowRightSquare } from 'react-icons/bs'
 type Props = {}
 
-export default function page({}: Props) {
+type generalData = {
+	preset:string,
+	schedule:any,
+	sponsors:any,
+}
+
+export default async function page({}: Props) {
+	const generalData = await fetchData<generalData[]>(`
+	*[_type == 'general' && preset == 'main'] {
+		_id,
+		preset,
+		schedule,
+		sponsors
+	}
+	`)
+	const main = generalData[0];
 	return (
 		<main id="page_stream">
 			<PageTitle
@@ -18,15 +35,15 @@ export default function page({}: Props) {
 			<section className="schedules" id='schedules'>
 					<div className="content">
 						<div className="sched-part">
-							<img src="/arts/placeholder_sched.png" alt="" />
+							<img src={main.schedule ? urlFor(main.schedule).url() : "/arts/placeholder_sched.png" } alt="" />
 
 						</div>
 						<article className='sched-detail'>
 							<h2>◈SCHEDULES◈</h2>
 							<p>Welcome dear guest! 
 Here’s the schedule of this week!</p>
-							<img src="/decors/sched-head.png" alt="" />
-							<a href="#" className='btn btn-styled'>✦ Catch My Streams!</a>
+							<img src={"/decors/sched-head.png"} alt="" />
+							<a href="https://twitch.tv/astramaeve" target='_blank' className='btn btn-styled'>✦ Catch My Streams! <BsArrowRightSquare/></a>
 						</article>
 					</div>
 			</section>
@@ -47,7 +64,7 @@ Here’s the schedule of this week!</p>
 
 					</article>
 					<figure className="spon-art">
-						<img src="/arts/placeholder_spon.png" alt="" className='sponsor-img' />
+						<img src={main.sponsors ? urlFor(main.sponsors).url() : "/arts/placeholder_spon.png"} alt="" className='sponsor-img' />
 					</figure>
 				</div>
 			</section>

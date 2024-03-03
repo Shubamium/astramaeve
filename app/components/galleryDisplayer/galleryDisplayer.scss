@@ -41,13 +41,30 @@
 			}
 		}
 
-		.description{
+		.description{ 
 			text-align: center;
 			text-shadow: 0px 0px 5px #6675FF, 2px 4px 15px rgba(0, 0, 0, 0.486);
 			color: #6675FF;
 		}
 	}
-
+	.gallery-nav{
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin: 1.55em 1em;
+		.btn-gallery{
+			box-shadow: 0px 0px 3px black;
+			background: #6675ff49;
+			color: #D87CFF;
+			font-size: 1rem;
+			padding: .2em 1em;
+			&.active{
+				scale: 1.1;
+				color: white;
+				background: #6675FF;
+			}
+		}
+	}
 	.gallery-part{
 		background: linear-gradient(180deg, rgba(39, 90.52, 223, 0.26) 0%, rgba(255, 21.25, 133.45, 0.24) 100%);
 		backdrop-filter: blur(20px);
@@ -73,6 +90,7 @@
 
 			position: relative;
 
+			
 			.top-part{
 				position: absolute;
 				width: 100%;
@@ -170,8 +188,13 @@
 			border: 2px solid #F8AF0F;
 			background: #633E9B;
 			display: block;
+			object-fit: cover;
 			width: 100%;
 			border-radius: 2em;
+			box-shadow: 0px 0px 10px #2dffff81;
+			&:hover{
+				object-fit: contain;	
+			}
 		}
 	}
 }

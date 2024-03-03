@@ -7,6 +7,7 @@ import Loading from "./components/loading/Loading";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 const cinzelDecorative = Cinzel_Decorative({ subsets: ["latin"],weight:['400','700','900'] });
 const lora = Lora({ subsets: ["latin"],weight:['400','700'] });
 

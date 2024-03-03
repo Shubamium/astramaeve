@@ -3,6 +3,8 @@ import React from 'react'
 import './itemListing.scss'
 import {Swiper, SwiperSlide} from 'swiper/react'
 type Props = {}
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import { Pagination,Navigation } from 'swiper/modules'
 import { CgShoppingCart } from 'react-icons/cg'
@@ -10,13 +12,14 @@ import { CgShoppingCart } from 'react-icons/cg'
 export default function ItemListing({}: Props) {
 	return (
 		<div className="item-listing">
-			<Swiper  
+			<Swiper   
 				className='item-list'
 				// slidesPerView={4}
 				centeredSlides={true}
 				slidesPerView={'auto'}
 				pagination={{
           dynamicBullets: true,
+					enabled:true
         }}
 				navigation={{
 					enabled:true

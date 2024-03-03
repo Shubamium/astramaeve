@@ -10,7 +10,7 @@
 		height: 500px;
 		padding: 4em;
 		mask: linear-gradient(to left,transparent 0%, white 10%, white 95%, transparent 100%);
-
+		position: relative;
 		.rule-grid{
 			flex-direction: column;
 			display: flex;

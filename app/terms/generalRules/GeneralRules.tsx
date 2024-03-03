@@ -11,10 +11,12 @@ import { TbDeviceComputerCameraOff } from 'react-icons/tb'
 import { LiaGrinBeamSweatSolid } from 'react-icons/lia'
 import { RiSpam2Fill } from 'react-icons/ri'
 type Props = {}
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export default function GeneralRules({}: Props) {
 	return (
-			<section className="general_rules">
+			<section className="general_rules" id='general'>
 					<Swiper className='rule-container'
 						modules={[Pagination,Navigation]}
 						slidesPerView={'auto'}

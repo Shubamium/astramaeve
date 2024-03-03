@@ -1,5 +1,5 @@
 #page_contacts{
-
+	padding-bottom: 200px;
 	.contact-container{
 		display: grid;
 		grid-template-columns: 2fr 1fr 2fr;
@@ -55,6 +55,10 @@
 				font-family: var(--fontAlt);
 				text-decoration: none;
 				transition: all 500ms ease;
+				line-height: 80%;
+				span{
+					font-size: 1rem;
+				}
 				&:hover{
 					&:not(strong){
 						color: #E91084;

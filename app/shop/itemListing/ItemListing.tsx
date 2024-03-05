@@ -2,13 +2,14 @@
 import React from 'react'
 import './itemListing.scss'
 import {Swiper, SwiperSlide} from 'swiper/react'
+import { Pagination,Navigation } from 'swiper/modules'
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import 'swiper/css/navigation';
 type Props = {
 	items:itemList[]
 }
-import { Pagination,Navigation } from 'swiper/modules'
+
 import { CgShoppingCart } from 'react-icons/cg'
 import { itemList } from '../page';
 import { urlFor } from '@/db/client';
@@ -19,20 +20,21 @@ export default function ItemListing({items}: Props) {
 		<div className="item-listing">
 			<Swiper   
 				className='item-list'
-				// slidesPerView={4}
-				centeredSlides={true}
 				slidesPerView={'auto'}
 				pagination={{
           dynamicBullets: true,
-					enabled:true
+					enabled:true,
+					type:'bullets'
         }}
 				navigation={{
-					enabled:true
+					nextEl:'.next-el',
+					prevEl:'.prev-el',
 				}}
 				modules={[Pagination,Navigation]}
 				spaceBetween={30}
-				// centeredSlides={true}
 			>
+				
+				<div className="swiper-scrollbar"></div>
 				{items.map((item,index)=>{
 					return (
 						<SwiperSlide className="item" key={item._id}>
@@ -52,8 +54,16 @@ export default function ItemListing({items}: Props) {
 						</SwiperSlide>
 					)
 				})}
-			
+				<div className="swiper-nav">
+					<button className='btn prev-el'>
+						<img src="/decors/gallery-btn.png" alt="" />
+					</button>
+					<button className='btn next-el'>
+						<img src="/decors/gallery-btn.png" alt="" />
+					</button>
+				</div>
 		</Swiper>
+	
 		</div>
 	)
 }

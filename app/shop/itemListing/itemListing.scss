@@ -1,18 +1,50 @@
 .item-listing{
 	background: url('/backgrounds/galaxy_subtle.png'),linear-gradient(180deg, #9833fdbb 15%, #2F299D 100%);
-	height: 500px;
 	backdrop-filter: blur(5px);
 	padding: 2em;
-	display: flex;
+	// display: flex;
 	padding-left: 10%;
-	position: relative;
-	
 	.item-list{
+		overflow: visible;
 		width: 100%;
 		// background: red;
 		padding: 2em 0;
-		padding-bottom: 3em;
-		mask: linear-gradient(to left,transparent 0%, white 10%, white 95%, transparent 100%);
+		// padding-top: 200px;
+		padding-left: 3.5em;
+		position: relative;
+		// mask: linear-gradient(to left,transparent 0%, white 10%, white 95%, transparent 100%);
+		padding-bottom: 100px;
+		.swiper-nav{
+			display: flex;
+			position: absolute;
+			bottom: -20%;
+			left: 45%;
+			// scale: -1;
+			transform: translate(-50%);
+			z-index: 1000;
+			.btn{
+				transition: all 500ms ease;
+				img{
+					max-width: 120px;
+					height: 120px;
+					object-fit: contain;
+				}
+				&.swiper-button-disabled{
+					pointer-events: none;
+					filter: grayscale(100%);
+				}
+			}
+			.next-el{
+				scale: -1;
+			}
+		}
+		.swiper-wrapper{
+			// mask: linear-gradient(to left,transparent 0%, white 10%, white 95%, transparent 100%);
+			// padding: 1em;
+			// padding-bottom: 3em;
+			// padding-left: 3.5em;
+			// overflow: visible;
+		}
 		.item{
 			width: 400px;
 			background: linear-gradient(180deg, rgba(255, 255, 255, 0.959) 0%, rgba(255, 255, 255, 0.859) 71%, rgba(255, 255, 255, 0.58) 100%);
@@ -22,6 +54,7 @@
 			flex-direction: column;
 			border: 1px solid white;
 			transition: all 250ms ease;
+			max-height: 500px;
 			position: relative;
 			.item-price{
 				position: absolute;
@@ -60,9 +93,12 @@
 				overflow: hidden;
 				width: 100%;
 				img{
+					object-fit: cover;
 					width: 100%;
 					height: 100%;
-					object-fit: contain;
+					&:hover{
+						object-fit: contain;
+					}
 				}
 			}
 			.item-info{

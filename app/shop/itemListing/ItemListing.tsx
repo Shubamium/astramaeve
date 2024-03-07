@@ -29,6 +29,7 @@ export default function ItemListing({items}: Props) {
 				navigation={{
 					nextEl:'.next-el',
 					prevEl:'.prev-el',
+					enabled:true
 				}}
 				modules={[Pagination,Navigation]}
 				spaceBetween={30}

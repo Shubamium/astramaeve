@@ -38,7 +38,9 @@ export default function ItemListing({items}: Props) {
 				<div className="swiper-scrollbar"></div>
 				{items.map((item,index)=>{
 					return (
-						<SwiperSlide className="item" key={item._id}>
+						<SwiperSlide className="item" onClick={()=>{
+							window.open(item.buy_link,'_blank')
+						}} key={item._id}>
 							<div className="item-price">
 									<p>{item.price}</p>
 							</div>
@@ -49,7 +51,8 @@ export default function ItemListing({items}: Props) {
 							<div className="item-info">
 								<p className='item-title ni'>{item.title}</p>
 								<div className="action">
-									<a href={item.buy_link} target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a>
+									{/* <a href={item.buy_link} target='_blank' className='btn btn-styled btn-buy'> <CgShoppingCart/> BUY</a> */}
+									<div className=""></div>
 								</div>
 							</div>
 						</SwiperSlide>

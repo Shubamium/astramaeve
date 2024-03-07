@@ -56,6 +56,8 @@
 			transition: all 250ms ease;
 			max-height: 500px;
 			position: relative;
+			cursor: pointer;
+			padding-bottom: 2.5em;
 			.item-price{
 				position: absolute;
 				background: #7499F9;

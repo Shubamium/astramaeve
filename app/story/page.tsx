@@ -4,6 +4,9 @@ import PageTitle from '../components/layout/pageTitle/PageTitle'
 import Link from 'next/link'
 import Tower from './Tower'
 import Salvere from './Salvere'
+import { FaStarAndCrescent } from 'react-icons/fa6'
+import { PiShootingStarBold } from 'react-icons/pi'
+import { GiScrollQuill } from 'react-icons/gi'
 type Props = {}
 
 export default function Story({}: Props) {
@@ -18,9 +21,15 @@ export default function Story({}: Props) {
 							<Link href={'#salvere'} className='btn btn-about-nav alt'> ✦ SALVERE</Link>
 						</div>
 						<p className='story-text'>
-							{`This should be replaced with general description about this page, Astra's journey began with a profound sense of disorientation as she opened her eyes for the first time. Instead of the expected demise, she found herself alive after what should have been the catastrophic end of a star's life. `}
+							{`Astra, the elven archmage of the kingdom of Salvere and presiding as the Master of the Amethyst Tower, is a figure of intrigue. Her days are often spent within the confines of her laboratories, where she delves into experiments, immerses herself in books, or indulges in games.`}
 						</p>
-
+						<p className='story-text'>
+							{`Beyond her seemingly detached demeanor lies a depth that belies her years, evident in the occasional distant gaze that speaks of experiences far beyond her apparent age.
+ Tower, is a figure of intrigue. Her days are often spent within the confines of her laboratories, where she delves into experiments, immerses herself in books, or indulges in games.`}
+						</p>
+						<p className='story-text'>
+							{`But heed this warning: under no circumstances should one offer her coffee, for reasons best left unspoken."`}
+						</p>
 						<div className="who-is">
 							<h2 className='who-title'>◈ WHO IS ASTRA</h2>
 							<div className="info-lists">
@@ -97,7 +106,7 @@ export default function Story({}: Props) {
 				<div className="confine">
 					<article className='story-part'>
 						<div className="story-heading">
-							<h2>◈ STORY - 1</h2> <hr />
+							<h2>◈ At the Beginning</h2> <hr />
 						</div>
 						<p> 
 							{`Astra's journey began with a profound sense of disorientation as she opened her eyes for the first time. Instead of the expected demise, she found herself alive after what should have been the catastrophic end of a star's life. `}
@@ -125,7 +134,7 @@ export default function Story({}: Props) {
 
 			<section className='story_two'>
 				<div className="content">
-				<h2>◈ STORY - 2 ◈</h2>
+				<h2>◈ Rebirth ◈</h2>
 				<p>
 					Unexpectedly, the end of her celestial existence ushered in a new opportunity and a new life, now named Astralias, a member of the <strong>Noble Mæve Clan</strong> in the <strong>kingdom of Salvere</strong>. 
 				</p>
@@ -170,6 +179,9 @@ export default function Story({}: Props) {
 						<div className="story-part">
 							<img src="/arts/kurukuru.gif" alt="" className='chibi'/>
 							<p>When not immersed in her latest research in the Amethyst Tower, she could be found teaching at Elvedere Academy or indulging in games in her messy room, much to the chagrin of her butler, Alvion, the only other resident of the tower.</p>
+							<a href="#" className='btn btn-styled'>
+								<PiShootingStarBold/> More Stories <GiScrollQuill/>
+							</a>
 						</div>
 					</div>
 					<div className="decor-container">

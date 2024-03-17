@@ -117,7 +117,7 @@ export default function page({}: Props) {
 									<CgLock/>
 								</div>
 								<div className="text-part">
-									<h2>{`Follow Streamer's Guidelines`}</h2>
+									<h2>{`Respect Everyone’s Privacy`}</h2>
 									<p>{`Avoid sharing personal information, including your own and others'. Protect your privacy and the privacy of others.`}
 
 </p>

@@ -58,9 +58,9 @@ export default async function page({}: Props) {
 						<h2>◈ REFERENCES ◈</h2>
 						<p>For every artist that wishes to create artworks with my design, here is the reference folder with all the materials to make it! I hope it’ll be of help! <br/><br/> Please remember that the design is property of Astra Maeve, do not replicate it for other Vtuber Model commissions, or for the creation of Original Characters. <br/><br/>
 The materials inside the folder are for artworks and fanart only. </p>
-						<Link href={'#'} target='_blank' className='btn btn-styled'>
+						<a href={'https://drive.google.com/drive/folders/1e18kJp_YHqhfpBCQR6Vy6Rm7yfFzLZnz'} target='_blank' className='btn btn-styled'>
 							✦ Reference Folder 
-						</Link>
+						</a>
 					</div>
 					
 				</section>
@@ -74,7 +74,7 @@ The materials inside the folder are for artworks and fanart only. </p>
 				<GalleryDisplayer 
 					title='Fanart'
 					id='fanart'
-					description='These artworks have been commissioned by Astra Maeve and are for her exclusive use.'
+					description='These fanarts are created by the wonderful members of this community! Thank you so much for every single artwork or gift received! I love them all!'
 					galleryData={fanart}
 				/>
 		</main>

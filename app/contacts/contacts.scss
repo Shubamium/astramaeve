@@ -14,7 +14,14 @@
 			position: relative;
 			.banner{
 				position: relative;
-				margin-top: 5em;
+			
+				object-fit: contain;
+				margin:  5em auto;
+				// img{
+				// 	width: 430px;
+				// 	height: 430px;
+				
+				// }
 			}
 			& .banner::before{
 				content:'';
@@ -35,6 +42,8 @@
 				
 				position: relative;
 				width: 400px;
+				border-radius: 50%;
+				outline: 2px solid #e91084;
 				height: 400px;
 			}
 			.maeve-logo{

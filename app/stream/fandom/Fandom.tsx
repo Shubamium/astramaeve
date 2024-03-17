@@ -63,9 +63,9 @@ export default function Fandom({}: Props) {
 								<p className='page-indicator'>{activeChapter+1}/{chapters.length}</p>
 								<button className='btn btn-ctrl' onClick={next}><FaArrowRight/></button>
 							</div>
-							<div className="btn btn-styled">
+							<a href='https://docs.google.com/document/d/1E2Lzo3QkM2IA19FLSZDgZx-lVGhppO717POOdC8hbOA' target='_blank' className="btn btn-styled">
 							✦ More Info <FaArrowRight/>
-							</div>
+							</a>
 						</div>
 					</article>
 					<figure>

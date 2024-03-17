@@ -12,7 +12,7 @@ import Sponsors from './sponsors/Sponsors'
 // import Swiper from 'swiper'
 type Props = {}
 
-type generalData = {
+export type generalData = {
 	preset:string,
 	schedule:any,
 	sponsors:{
@@ -23,7 +23,8 @@ type generalData = {
 	achieved_goals:{
 		goal:string,
 		date:string
-	}[]
+	}[],
+	contact_art:any;
 }
 
 export default async function page({}: Props) {
@@ -37,7 +38,6 @@ export default async function page({}: Props) {
 		achieved_goals,
 	}
 	`)
-	console.log(generalData)
 	const main = generalData[0];
 	return (
 		<main id="page_stream">
@@ -231,13 +231,13 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 				</div>
 				<div className="action">
 					<div className="collab-links">
-							<a href='#' target='_blank' className="btn collab-link">
+							<a href='mailto:astralias.maeve@gmail.com' target='_blank' className="btn collab-link">
 									<FaMailBulk/>
 							</a>
-							<a href='#' target='_blank' className="btn collab-link">
+							<a href='https://discord.com/invite/hqWVaBQyn7' target='_blank' className="btn collab-link">
 									<FaDiscord/>
 							</a>
-							<a href='#' target='_blank' className="btn collab-link">
+							<a href='https://twitter.com/astra_maeve' target='_blank' className="btn collab-link">
 									<FaTwitter/>
 							</a>
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import PageTitle from '../components/layout/pageTitle/PageTitle'
 import './stream.scss'
 import { FaMailBulk } from 'react-icons/fa'
@@ -7,12 +7,23 @@ import Fandom from './fandom/Fandom'
 import { FaArrowLeft, FaArrowRight, FaDiscord, FaTwitter } from 'react-icons/fa6'
 import { fetchData, urlFor } from '@/db/client'
 import { BsArrowRightSquare } from 'react-icons/bs'
+import Sponsors from './sponsors/Sponsors'
+
+// import Swiper from 'swiper'
 type Props = {}
 
 type generalData = {
 	preset:string,
 	schedule:any,
-	sponsors:any,
+	sponsors:{
+		title:string;
+		image:any;
+	}[],
+	goals:string[],
+	achieved_goals:{
+		goal:string,
+		date:string
+	}[]
 }
 
 export default async function page({}: Props) {
@@ -21,9 +32,12 @@ export default async function page({}: Props) {
 		_id,
 		preset,
 		schedule,
-		sponsors
+		sponsors,
+		goals,
+		achieved_goals,
 	}
 	`)
+	console.log(generalData)
 	const main = generalData[0];
 	return (
 		<main id="page_stream">
@@ -35,7 +49,7 @@ export default async function page({}: Props) {
 			<section className="schedules" id='schedules'>
 					<div className="content">
 						<div className="sched-part">
-							<img src={main.schedule ? urlFor(main.schedule).url() : "/arts/placeholder_sched.png" } alt="" />
+							<img src={main && main.schedule ? urlFor(main.schedule).url() : "/arts/placeholder_sched.png" } alt="" />
 
 						</div>
 						<article className='sched-detail'>
@@ -48,26 +62,7 @@ Here’s the schedule of this week!</p>
 					</div>
 			</section>
 
-			<section className="sponsors" id="sponsors">
-				<div className="confine">
-					<article>
-						<div className="spon-head">
-							<h2>Sponsors</h2>
-							<hr />
-						</div>
-						<div className="description">
-								<p>{`	I've established partnerships and affiliations with various entities, all geared towards benefiting the community through discounts or support groups.`}
-								<br/><br/> If you have business inquiries, you can contact me at: </p>
-
-								<a href="mailto:astralias.maeve@gmail.com" className='btn contact-mail'>◈  astralias.maeve@gmail.com <FaMailBulk/></a>
-						</div>
-
-					</article>
-					<figure className="spon-art">
-						<img src={main.sponsors ? urlFor(main.sponsors).url() : "/arts/placeholder_spon.png"} alt="" className='sponsor-img' />
-					</figure>
-				</div>
-			</section>
+			<Sponsors sponsors={main.sponsors}/>
 
 			<section className='goals' id='goals'>
 				<div className="goals-head">
@@ -83,62 +78,62 @@ Here’s the schedule of this week!</p>
 It is my belief that each milestone we reached should be celebrated, no matter how big or small it is, and that the journey that will bring us forward will see us grow together! <br /> <br />These are my wishes for this year:</p>
 
 						<div className="lf-goals">
-							{/* goal */}
-							<div className="goal">
+						<div className="goal" style={{'--height':main.goals?.length} as CSSProperties}>
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Reaching 1000 subscribers on Twitch</p>
 							</div>
-							{/* goal */}
-							<div className="goal">
+							{main.goals?.map((goal,index)=>{
+								return <div className="goal" key={'goal-list'+index}>
+								<div className="circle-container">
+									<div className="circle"></div>
+								</div>
+								<p>{goal}</p>
+							</div>
+							})}
+							{/* <div className="goal">
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Reaching 1000 subscribers on Twitch</p>
 							</div>
-							{/* goal */}
 							<div className="goal">
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Reaching 1000 followers on Twitter</p>
 							</div>
-							{/* goal */}
 							<div className="goal">
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Creating my first cover</p>
 							</div>
-							{/* goal */}
 							<div className="goal">
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Publishing my first original song</p>
 							</div>
-							{/* goal */}
 							<div className="goal">
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Debuting my Live 2D model</p>
 							</div>
-							{/* goal */}
 							<div className="goal">
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Create a more cohesive branding</p>
 							</div>
-							{/* goal */}
 							<div className="goal">
 								<div className="circle-container">
 									<div className="circle"></div>
 								</div>
 								<p>Befriending more people</p>
-							</div>
+							</div> */}
 							
 						</div>
 	
@@ -148,17 +143,21 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 					<h2 className='title'>✦ Moments already in time ✦</h2>
 						<p className='description'>In the years together, some important milestones are already reached! Let’s remember them fondly!</p>
 
-						<div className="r-goals">
-								<div className="goal">
-									<div className="circle-container">
-										<div className="circle"></div>
+						<div className="r-goals" style={{'--height':main.achieved_goals?.length || 1} as CSSProperties} >
+								{
+									main.achieved_goals?.map((goal,index)=>{
+										return 	<div className="goal" key={'achieved-goals-list'+index}>
+										<div className="circle-container">
+											<div className="circle"></div>
+										</div>
+										<div className="goal-text">
+												<p>{goal.goal}</p>
+												<p className='date'>{goal.date}</p>
+										</div>
 									</div>
-									<div className="goal-text">
-											<p>Befriending more people</p>
-											<p className='date'>16 February 2022</p>
-									</div>
-								</div>
-								<div className="goal">
+									})
+								}
+								{/* <div className="goal">
 									<div className="circle-container">
 										<div className="circle"></div>
 									</div>
@@ -212,7 +211,7 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 											<p>Launching my personal website</p>
 											<p className='date'>TBA</p>
 									</div>
-								</div>
+								</div> */}
 						</div>
 					</div>
 				</div>

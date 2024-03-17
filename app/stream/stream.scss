@@ -6,7 +6,7 @@
 		margin: 100px 0;
 		.content{
 			max-width:min( 1000px, 80%);
-			// max-width: 1200px;
+			max-width: 1200px;
 
 			margin: 0 auto;
 			display: grid;
@@ -19,6 +19,8 @@
 					max-width: 100%;
 					height: 100%;
 					width: 100%;
+					width: 1000px;
+					height: 500px;
 					border: 2px solid white;
 					outline: 3px solid #F8AF0F;
 					outline-offset: 5px;
@@ -28,6 +30,7 @@
 				}
 				&:hover{
 					img{
+						object-fit: contain;
 						outline-offset: 11px;
 					}
 				}
@@ -82,12 +85,13 @@ transition: all 450ms;
 		margin: 200px 0;
 	
 		.confine{
-			max-width: min(900px,85%);
+			max-width: min(1000px,85%);
+			
 			margin:  0 auto;
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1.2fr;
 			align-items: center;
-
+			gap: 1em;
 			article{
 				.spon-head{
 					display: flex;
@@ -131,18 +135,57 @@ transition: all 450ms;
 
 				}
 			}
-			.spon-art{
-				max-width: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				img{
-					scale: 1.2;
-					max-width: 100%;
+			.spon-list{
+				// max-width: 50%;
+				// display: flex;
+				// align-items: center;
+				// justify-content: center;
+				width: 50%;
+				gap: 1em;
+				.sponsor-slider{
+					width: 500px;
+					height: 100%;
+					.sponsor-slide{
+						padding: 1em;
+						transition: all 450ms ease;
+						&:hover{
+							scale: 1.05;
+							cursor: pointer;
+						}
+						width: 300px;
+						height: 300px;
+					}
+				}
+				.sponsor-img{
+					// max-width: 100%;
+					width: 300px;
+					height: 300px;
 					background: #747EC5;
 					transition: all 450ms ease;
 					border: 2px solid #F8AF0F;
 					max-height: 300px;
+				}
+			}
+			position: relative;
+			.swiper-navigation{
+				position: absolute;
+				top: 80%;
+				left: 0%;
+				display: flex;
+				z-index: 10;
+				width: 100%;
+				.btn{
+					img{
+						max-width: 80px;
+
+					}
+					&.swiper-button-disabled{
+						opacity: .5;	
+						scale: 0.8;
+					}
+				}
+				.swiper-next{
+					rotate: 180deg;
 				}
 			}
 		}
@@ -213,6 +256,8 @@ transition: all 450ms;
 					position: relative;
 					.goal{
 						position: relative;
+						--height:9;
+
 						&:first-of-type{
 							&::before{
 								content:'';
@@ -221,8 +266,8 @@ transition: all 450ms;
 								left: 7px;
 								// left:9%;
 								width:5px;
-								height:100%;
-								scale: 1 21;
+								height:300%;
+								scale: 1 var(--height);
 								transform-origin: top;
 								background: linear-gradient(white 0%, transparent 100%);
 
@@ -248,6 +293,8 @@ transition: all 450ms;
 					flex-direction: column;
 					justify-content: center;
 					gap: 1.25em 2em;
+
+					--height:2;
 					.goal{
 
 						background: linear-gradient(180deg, rgba(0, 195, 255, 0.928) 0%, rgba(255, 188, 45, 0.928) 100%), url('/backgrounds/galaxy_slight.png');
@@ -273,8 +320,8 @@ transition: all 450ms;
 								z-index: 2;
 								// left:9%;
 								width:5px;
-								height:100%;
-								scale: 1 9 ;
+								height:130%;
+								scale: 1 var(--height);
 								transform-origin: top;
 								background: linear-gradient(#2F299D 0%, #2F299D 70%, transparent 100%);
 

@@ -179,7 +179,7 @@ export default function Story({}: Props) {
 						<div className="story-part">
 							<img src="/arts/kurukuru.gif" alt="" className='chibi'/>
 							<p>When not immersed in her latest research in the Amethyst Tower, she could be found teaching at Elvedere Academy or indulging in games in her messy room, much to the chagrin of her butler, Alvion, the only other resident of the tower.</p>
-							<a href="#" className='btn btn-styled'>
+							<a href="https://sites.google.com/view/theamethystarchives/home-page" target='_blank' className='btn btn-styled'>
 								<PiShootingStarBold/> More Stories <GiScrollQuill/>
 							</a>
 						</div>

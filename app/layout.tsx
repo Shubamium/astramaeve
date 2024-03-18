@@ -62,7 +62,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="body" style={{'--fontMain':lora.style.fontFamily,'--fontAlt':cinzelDecorative.style.fontFamily} as CSSProperties}>
 				<Navigation/>
-				{/* <Loading/> */}
+				<Loading/>
 				<img src="/decors/giant_arrow_circle.png" alt=""  className="decor_background-circle ni"/>
 				<img src="/decors/logo_small.png" alt=""  className="decor_top logo ni"/>
 				<img src="/decors/galaxy_circle.png" alt=""  className="decor_top circle ni"/>

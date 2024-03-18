@@ -10,7 +10,7 @@ import { urlFor } from '@/db/client';
 // Pagination
 type Props = {
 	sponsors:{
-		title:string;
+		link:string;
 		image:any;
 	}[]
 }
@@ -54,7 +54,7 @@ export default function Sponsors({
 					{
 						sponsors && sponsors.map((spon,index)=>{
 							return <SwiperSlide key={'sponsors-list'+index} onClick={()=>{
-								window.open(spon.title,'_blank')
+								window.open(spon.link,'_blank')
 							}} className='sponsor-slide'>
 								<img src={urlFor(spon.image).url()} alt="" className='sponsor-img' />
 							</SwiperSlide>

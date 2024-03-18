@@ -8,6 +8,7 @@ import { FaArrowLeft, FaArrowRight, FaDiscord, FaTwitter } from 'react-icons/fa6
 import { fetchData, urlFor } from '@/db/client'
 import { BsArrowRightSquare } from 'react-icons/bs'
 import Sponsors from './sponsors/Sponsors'
+import { redirect } from 'next/navigation'
 
 // import Swiper from 'swiper'
 type Props = {}
@@ -16,7 +17,7 @@ export type generalData = {
 	preset:string,
 	schedule:any,
 	sponsors:{
-		title:string;
+		link:string;
 		image:any;
 	}[],
 	goals:string[],
@@ -38,7 +39,12 @@ export default async function page({}: Props) {
 		achieved_goals,
 	}
 	`)
+	// console.log(generalData[0])
 	const main = generalData[0];
+	if(!main){
+		redirect('/')
+		return;
+	}
 	return (
 		<main id="page_stream">
 			<PageTitle
@@ -77,66 +83,18 @@ Here’s the schedule of this week!</p>
 						<p className='description'>In our beautiful moments together, I wish to always grow more as a content creator and as a person. <br /> <br />
 It is my belief that each milestone we reached should be celebrated, no matter how big or small it is, and that the journey that will bring us forward will see us grow together! <br /> <br />These are my wishes for this year:</p>
 
-						<div className="lf-goals">
-						<div className="goal" style={{'--height':main.goals?.length} as CSSProperties}>
-								<div className="circle-container">
-									<div className="circle"></div>
+						<div className="lf-goals" style={{'--height':main.goals?.length} as CSSProperties}>
+							{/* <div className="goal" */}
+								{main.goals?.map((goal,index)=>{
+									return <div className="goal" key={'goal-list'+index}>
+									<div className="circle-container">
+										<div className="circle"></div>
+									</div>
+									<p>{goal}</p>
 								</div>
-								<p>Reaching 1000 subscribers on Twitch</p>
-							</div>
-							{main.goals?.map((goal,index)=>{
-								return <div className="goal" key={'goal-list'+index}>
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>{goal}</p>
-							</div>
-							})}
-							{/* <div className="goal">
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>Reaching 1000 subscribers on Twitch</p>
-							</div>
-							<div className="goal">
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>Reaching 1000 followers on Twitter</p>
-							</div>
-							<div className="goal">
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>Creating my first cover</p>
-							</div>
-							<div className="goal">
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>Publishing my first original song</p>
-							</div>
-							<div className="goal">
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>Debuting my Live 2D model</p>
-							</div>
-							<div className="goal">
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>Create a more cohesive branding</p>
-							</div>
-							<div className="goal">
-								<div className="circle-container">
-									<div className="circle"></div>
-								</div>
-								<p>Befriending more people</p>
-							</div> */}
-							
+								})}
+							{/* </div> */}
 						</div>
-	
 					
 					</div>
 					<div className="reached goal-container">
@@ -157,62 +115,7 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 									</div>
 									})
 								}
-								{/* <div className="goal">
-									<div className="circle-container">
-										<div className="circle"></div>
-									</div>
-									<div className="goal-text">
-											<p>First Birthday together</p>
-											<p className='date'>16 February 2022</p>
-									</div>
-								</div>
-								<div className="goal">
-									<div className="circle-container">
-										<div className="circle"></div>
-									</div>
-									<div className="goal-text">
-											<p>First 200 Twitch followers</p>
-											<p className='date'>TBA</p>
-									</div>
-								</div>
-
-								<div className="goal">
-									<div className="circle-container">
-										<div className="circle"></div>
-									</div>
-									<div className="goal-text">
-											<p>Opening my own shop</p>
-											<p className='date'>16 February 2022</p>
-									</div>
-								</div>
-								<div className="goal">
-									<div className="circle-container">
-										<div className="circle"></div>
-									</div>
-									<div className="goal-text">
-											<p>First Karaoke stream</p>
-											<p className='date'>16 February 2022</p>
-									</div>
-								</div>
-								<div className="goal">
-									<div className="circle-container">
-										<div className="circle"></div>
-									</div>
-									<div className="goal-text">
-											<p>Commissioning my first Live 2D model</p>
-											<p className='date'>TBA</p>
-									</div>
-								</div>
-								<div className="goal">
-									<div className="circle-container">
-										<div className="circle"></div>
-									</div>
-									<div className="goal-text">
-											<p>Launching my personal website</p>
-											<p className='date'>TBA</p>
-									</div>
-								</div> */}
-						</div>
+							</div>
 					</div>
 				</div>
 			</section>

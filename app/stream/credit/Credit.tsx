@@ -17,8 +17,8 @@ const creditList:{
 		pfp:'https://i.ibb.co/tmS2yf4/DCej7g-E8-400x400-1.jpg'
 	},
 	{
-		name:'Character Design',
-		role:'Astra Maeve',
+		name:'Astra Maeve',
+		role:'Character Design',
 		link:'https://twitter.com/astra_maeve',
 		pfp:'https://i.ibb.co/61C5PFS/image.png'
 	},{

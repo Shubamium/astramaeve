@@ -29,6 +29,7 @@
 					object-fit: cover;
 				}
 				&:hover{
+					background:rgba(255, 255, 255, 0.55);
 					img{
 						object-fit: contain;
 						outline-offset: 11px;
@@ -254,9 +255,9 @@ transition: all 450ms;
 					gap: 2em;
 					
 					position: relative;
+					--height:1;
 					.goal{
 						position: relative;
-						--height:9;
 
 						&:first-of-type{
 							&::before{

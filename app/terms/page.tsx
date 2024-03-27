@@ -21,7 +21,7 @@ export default function page({}: Props) {
 					subtitle='general guidelines '
 				/>
 			<GeneralRules/>
-			<section className='fandom-rules' id='rules'>
+			<section className='fandom-rules' id='fandom'>
 				<figure className="art-part">
 						<img src="/arts/character_art_xl.png" alt="" className='chara_xl' />
 				</figure>

@@ -28,6 +28,12 @@ export type generalData = {
 	contact_art:any;
 }
 
+export type creditData = {
+	name:string,
+	role:string,
+	link:string,
+	pfp:any
+}
 export default async function page({}: Props) {
 	const generalData = await fetchData<generalData[]>(`
 	*[_type == 'general' && preset == 'main'] {
@@ -38,6 +44,14 @@ export default async function page({}: Props) {
 		goals,
 		achieved_goals,
 	}
+	`)
+	const creditData = await fetchData<creditData[]>(`
+		*[_type == 'credits'] {
+			name,
+			role,
+			link,
+			pfp
+		}
 	`)
 	// console.log(generalData[0])
 	const main = generalData[0];
@@ -120,7 +134,7 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 				</div>
 			</section>
 
-			<Credit/>
+			<Credit creditList={creditData}/>
 
 			<Fandom/>
 	

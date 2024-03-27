@@ -1,10 +1,14 @@
 'use client'
 import React from 'react'
+import { creditData } from '../page'
+import { urlFor } from '@/db/client'
 
-type Props = {}
+type Props = {
+	creditList :creditData[]
+}
 
 
-const creditList:{
+const sampleCreditList:{
 	name:string,
 	role:string,
 	link:string,
@@ -43,7 +47,7 @@ const creditList:{
 		pfp:'https://i.ibb.co/N91BJSJ/3-J2-G4w-Mu-400x400.jpg'
 	}
 ]
-export default function Credit({}: Props) {
+export default function Credit({creditList}: Props) {
 	return (
 		<section className='credits' id="credits">
 			<div className="credit-header">
@@ -65,7 +69,7 @@ export default function Credit({}: Props) {
 						window.open(credit.link,'_blank')
 					}}>
 						<div className="credit-img">
-							<img src={credit.pfp || "./arts/reference_head.png"} alt="" className='pfp' />
+							<img src={urlFor(credit.pfp).url() || "./arts/reference_head.png"} alt="" className='pfp' />
 						</div>	
 						<p className='role'>{credit.role}</p>
 						<p className='name'>{credit.name}</p>

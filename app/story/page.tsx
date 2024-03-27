@@ -117,7 +117,7 @@ export default function Story({}: Props) {
 					</article>
 
 					<figure>
-						<img src="" alt="" />
+						<img src="/arts/story-1.png" alt="" />
 					</figure>
 				</div>
 			</section>

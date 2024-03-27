@@ -2,7 +2,7 @@
 import React from 'react'
 import { creditData } from '../page'
 import { urlFor } from '@/db/client'
-
+import { motion,AnimatePresence} from 'framer-motion'
 type Props = {
 	creditList :creditData[]
 }
@@ -63,8 +63,13 @@ export default function Credit({creditList}: Props) {
 
 			<div className="credit-list">	
 				{creditList.map((credit,index)=>{
-					return 	<div className="credit" 
-					key={'credit-list'+index}
+					return 	<motion.div
+					initial={{opacity:0,x:100,scale:0}}
+					// animate={{opacity:1,x:0}}
+					whileInView={{opacity:1,x:0,scale:1}}
+					transition={{duration:0.5,delay:index*0.2}}
+					className="credit" 
+					key={'credit-list'+ credit.role}
 					onClick={()=>{
 						window.open(credit.link,'_blank')
 					}}>
@@ -73,7 +78,7 @@ export default function Credit({creditList}: Props) {
 						</div>	
 						<p className='role'>{credit.role}</p>
 						<p className='name'>{credit.name}</p>
-				</div>
+				</motion.div>
 				})}
 				{/* <div className="credit" onClick={()=>{
 						window.open('https://google.com','_blank')

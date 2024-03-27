@@ -407,7 +407,7 @@ transition: all 450ms;
 				justify-content: center;
 				flex-direction: column;
 				align-items: center;
-				transition: all 250ms ease;
+				transition: scale 250ms ease;
 				margin-top: 100px;
 				margin-inline: 2em;
 				&:hover{

@@ -403,6 +403,7 @@ transition: all 450ms;
 			max-width: min(1400px, 90%);
 			margin:  0 auto;
 			.credit{
+				min-width: 15%;
 				display: flex;
 				justify-content: center;
 				flex-direction: column;

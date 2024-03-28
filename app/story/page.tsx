@@ -104,6 +104,11 @@ export default function Story({}: Props) {
 			</section>
 			<section className="story_one" id='story_one'>
 				<div className="confine">
+					
+					<figure>
+						<img src="/arts/story-1.png" alt="" />
+					</figure>
+
 					<article className='story-part'>
 						<div className="story-heading">
 							<h2>◈ At the Beginning</h2> <hr />
@@ -116,9 +121,6 @@ export default function Story({}: Props) {
 						</p>
 					</article>
 
-					<figure>
-						<img src="/arts/story-1.png" alt="" />
-					</figure>
 				</div>
 			</section>
 

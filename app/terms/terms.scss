@@ -19,7 +19,20 @@
 			justify-content: center;
 			margin-left: 150px;
 		}
+		position: relative;
 
+		&::before{
+			content:'';
+			position:absolute;
+			top:0%;
+			left:0%;
+			width:100%;
+			scale: 10 1.2;
+			height:100%;
+			background:linear-gradient(180deg, #BB8BEB 15%, #2F299D 100%) ;
+			rotate: -5deg;
+			z-index: -2;
+		}
 		article{
 			max-width: min(800px,80%);
 			margin: 50px 0;

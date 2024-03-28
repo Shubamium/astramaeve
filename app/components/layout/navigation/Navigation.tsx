@@ -160,7 +160,7 @@ export default function Navigation({}: Props) {
 				stiffness:200,
 				damping:25
 			})
-			 animate('.sidebar-link:hover',{
+			 animate('.sidebar-link:hover, .fallback',{
 				x:100,
 				scale:2,
 			},{
@@ -216,6 +216,7 @@ export default function Navigation({}: Props) {
 				})}
 			</div>
 		</nav>
+			<div className="fallback"></div>
 
 		</div>
 	)

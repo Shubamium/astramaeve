@@ -28,7 +28,7 @@
 				color: #3340B7;
 				display: grid;
 				grid-template-columns: 40px 1fr;
-				transition: all 550ms ease;
+				transition: scale 550ms ease;
 				gap: 2em;
 				max-height: 100%;
 				.icon{

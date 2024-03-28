@@ -71,6 +71,7 @@ transition: all 450ms;
 				.btn-styled{
 					background: #2F299D;
 					border: 2px solid #2DFFFF;
+				
 				}
 			}
 		}
@@ -469,7 +470,7 @@ transition: all 450ms;
 		padding: 2em;
 		z-index: -20;
 		backdrop-filter: blur(20px);
-
+		box-shadow: 0px 0px 25px 4px #0a135da2;
 		.content{
 			display: grid;
 			grid-template-columns: repeat(2,1fr);
@@ -612,6 +613,11 @@ transition: all 450ms;
 						rotate: 45deg;
 					}
 					// outline-offset: 2px;
+					.btn{
+						&:hover{
+							box-shadow: 4px 4px 14px 2px #2DFFFF;
+						}
+					}
 				}
 			}
 		}

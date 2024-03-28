@@ -9,6 +9,7 @@ import { fetchData, urlFor } from '@/db/client'
 import { BsArrowRightSquare } from 'react-icons/bs'
 import Sponsors from './sponsors/Sponsors'
 import { redirect } from 'next/navigation'
+import Collabs from './collabs/Collabs'
 
 // import Swiper from 'swiper'
 type Props = {}
@@ -137,33 +138,8 @@ It is my belief that each milestone we reached should be celebrated, no matter h
 			<Credit creditList={creditData}/>
 
 			<Fandom/>
-	
-			<section className="collabs" id="collabs">
-
-				<div className="art-part">
-					<img src="/arts/collab-art.png" alt="" className='collab-art' />
-				</div>
-				<div className="collab-text">
-					<p className='description'>If you would like to collab, please feel free to reach us via Email, Twitter DM or Discord! <br /> <br /> You can consult the current list of games that are available for collabs: </p>
-				</div>
-				<div className="action">
-					<div className="collab-links">
-							<a href='mailto:astralias.maeve@gmail.com' target='_blank' className="btn collab-link">
-									<FaMailBulk/>
-							</a>
-							<a href='https://discord.com/invite/hqWVaBQyn7' target='_blank' className="btn collab-link">
-									<FaDiscord/>
-							</a>
-							<a href='https://twitter.com/astra_maeve' target='_blank' className="btn collab-link">
-									<FaTwitter/>
-							</a>
-
-					</div>
-					<a href='https://docs.google.com/document/d/19heJ2GMrCj-LszUBaOi3ZGqm6Tva8y669ZnDs_zeXuk/edit?usp=sharing' target='_blank' className="btn btn-styled">
-							✦ Game List <FaArrowRight/>
-					</a>
-				</div>
-			</section>
+	    <Collabs/>
+    
 		</main>
 	)
 }

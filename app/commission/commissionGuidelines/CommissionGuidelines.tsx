@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-
+import {AnimatePresence, motion } from 'framer-motion'
 type Props = {}
 
 type guidelineItem ={
@@ -91,14 +91,24 @@ export default function CommissionGuidelines({}: Props) {
 					<div className="guidelines-list">
 						{guidelineList[activeGuideline].guideline.map((guide,index)=>{
 							return (
-								<div className="guideline" key={guidelineList[activeGuideline].slug+'-'+index}>
-									<div className="icon">
+								<motion.div
+											initial={{x:-200,opacity:0}}
+											animate={{x:0,opacity:1}}
+											transition={{duration:0.7,delay:index*0.2}}
+											exit={{x:200,opacity:0}}
+									className="guideline" key={guidelineList[activeGuideline].slug+'-'+index}>
+									<motion.div 
+											initial={{x:-200,opacity:0,rotate:-360}}
+											animate={{x:0,opacity:1,rotate:0}}
+											transition={{duration:0.7,delay:index*0.2}}
+											exit={{x:200,opacity:0}}
+										className="icon">
 										<img src="/decors/small_logo.png" alt="" />
-									</div>
+									</motion.div>
 									<div className="text">
 										<p>{guide}</p>
 									</div>
-								</div>
+								</motion.div>
 							)
 						})}
 						
@@ -106,15 +116,20 @@ export default function CommissionGuidelines({}: Props) {
 
 					</div>
 					<div className="comms-nav">
-							{guidelineList.map((nav,index)=>{
-								return (
-									<div onClick={()=>{
-										setActiveGuideline(index)
-									}} className={`comms-nav-item btn ${index === activeGuideline ? 'active' : ''} `} key={'nav-'+nav.slug}>
-										✦ {nav.title}
-									</div>
-								)
-							})}
+								{guidelineList.map((nav,index)=>{
+									return (
+										<motion.div 
+											initial={{y:-200,opacity:0}}
+											animate={{y:0,opacity:1}}
+											exit={{y:200,opacity:0}}
+											transition={{duration:0.7,delay:index*0.2}}
+										onClick={()=>{
+											setActiveGuideline(index)
+										}} className={`comms-nav-item btn ${index === activeGuideline ? 'active' : ''} `} key={'nav-'+nav.slug}>
+											✦ {nav.title}
+										</motion.div>
+									)
+								})}
 					</div>
 				
 				</div>

@@ -26,7 +26,16 @@ export default function Home() {
 						animate={{opacity:1,x:0}}
 						transition={{duration:1,delay:2.5}}
 					
-					className='main-title'>✦ Astra Maeve</motion.h1>
+					className='main-title'>✦ {"Astra \n Maeve".split('').map((letter,index)=>{
+						return <motion.span 
+							initial={{scale:1.5,y:200,opacity:0,filter:'drop-shadow(0px 0px 20px 4px white)'}}
+							animate={{scale:1,y:0,opacity:1,filter:'drop-shadow(0px 0px 20px 4px transparent)'}}
+							transition={{duration:0.4,delay:2.5 + (index*0.2)}}
+							style={{display:'inline-block'}}
+						key={'title-letter'+index} >
+								{letter}
+						</motion.span>
+					})}</motion.h1>
 					<motion.p 
 						initial={{opacity:0,x:100}}
 						animate={{opacity:1,x:0}}

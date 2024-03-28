@@ -4,6 +4,7 @@ import './galleryDisplayer.scss'
 import { FaArrowLeft, FaArrowRight, FaDiamond } from 'react-icons/fa6'
 import { galleryData } from '@/app/art/page'
 import { urlFor } from '@/db/client'
+import {AnimatePresence, motion }from 'framer-motion'
 type Props = {
 	title:string,
 	description:string,
@@ -59,12 +60,26 @@ export default function GalleryDisplayer({
 								<div className="top-part">
 										{aImageList.map((data,index)=>{
 											return (
-												<FaDiamond className={`diamond-counter ${index > activeImage ? 'inactive' : '' }`} key={'indicator-'+data.artist+'-'+index}/>
+												<motion.div 
+													initial={{scale:0}}
+													animate={{scale:1}}
+													transition={{delay:index*0.1}}
+												key={'indicator-'+data.artist+''+activeImage+'-'+index}>
+													<FaDiamond className={`diamond-counter ${index > activeImage ? 'inactive' : '' }`} />
+												</motion.div>
 											)											
 										})}
 									
 								</div>
-								<img src={urlFor(aImage.image).url()} alt="" className='active-img'  />
+										<AnimatePresence mode='wait'> 
+											<motion.img 
+										initial={{x:100,opacity:0}}
+										animate={{x:0,opacity:1}}
+										exit={{x:-100,opacity:0}}
+										transition={{duration:0.5}}
+										key={'active-image'+title+activeImage}
+									src={urlFor(aImage.image).url()} alt="" className='active-img'  />
+										</AnimatePresence>
 								<div className="bottom-part">
 									<a href={aImage.artist_link} target='_blank' className="artwork-credit">
 								    	Artwork by <span>{aImage.artist}</span>

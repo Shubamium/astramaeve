@@ -160,7 +160,7 @@ export default function Navigation({}: Props) {
 				stiffness:200,
 				damping:25
 			})
-			await animate('.sidebar-link:hover',{
+			 animate('.sidebar-link:hover',{
 				x:100,
 				scale:2,
 			},{
@@ -171,7 +171,11 @@ export default function Navigation({}: Props) {
 			})
 	
 		}
-		playAnimation()
+		try{
+			playAnimation()
+		}catch(e){
+			console.log(e);
+		}
 	}
 
 	useEffect(()=>{

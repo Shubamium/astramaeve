@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
-
+import {motion,AnimatePresence} from 'framer-motion'
 type Props = {}
 
 
@@ -56,9 +56,25 @@ export default function Salvere({}: Props) {
 								<h2>◈ SALVERE</h2>
 								<hr />
 						</div>
-						<p className='story-text'>
-							{chapters[activeChapter]}
-						</p>
+					
+						<AnimatePresence mode='wait'>
+						<motion.p 
+							initial={{x:-200,opacity:0}}
+							animate={{x:0,opacity:1}}
+							exit={{x:200,opacity:0}}
+							transition={{duration:0.5}}
+						className='story-text' key={activeChapter}>
+							{chapters[activeChapter].split(' ').map((word,index)=>{
+								return	<motion.span 
+									initial={{opacity:0,y:10}}
+									animate={{opacity:1,y:0}}
+									transition={{duration:0.5,delay:index*0.1}}
+								key={'salver-text'+index}>
+									{' '+ word}
+							</motion.span>
+							})}
+						</motion.p>
+					</AnimatePresence>
 						<div className="controls">
 							<button className='btn btn-ctrl' onClick={prev}><FaArrowLeft/></button>
 							<p className='page-indicator'>{activeChapter+1}/{chapters.length}</p>

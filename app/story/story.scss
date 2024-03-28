@@ -48,6 +48,9 @@
 			.story-text{
 				margin-top: 1em;
 				font-size: .9rem;
+				span{
+					display: inline;
+				}
 			}
 
 			.who-is{
@@ -324,9 +327,9 @@
 		flex-wrap: nowrap;
 		// justify-content: stretch;
 		align-items: stretch;
+		padding-bottom: 30vh;
 		.story-container{
 			width: 100%;
-
 			.story-part{
 				max-width: 800px;
 				margin:  100px auto;

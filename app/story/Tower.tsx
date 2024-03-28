@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
-
+import {AnimatePresence, motion} from 'framer-motion'
 type Props = {}
 
 
@@ -39,7 +39,11 @@ export default function Tower({}: Props) {
 		<section className="tower" id="tower">
 
 				<div className="decor-circle ni">
-					<img src="/decors/circle_basic.png" alt="" className='circle-dec' />
+					<motion.img 
+						initial={{opacity:0,scale:2,rotate:-40}}
+						whileInView={{opacity:1,scale:1,rotate:0}}
+						transition={{delay:0.5,duration:.8}}
+					src="/decors/circle_basic.png" alt="" className='circle-dec' />
 				</div>
 				<div className="content">
 					<div className="tower-title">
@@ -47,9 +51,25 @@ export default function Tower({}: Props) {
 							<h2>THE AMETHYST TOWER</h2>
 							<hr />
 					</div>
-					<p className='story-text'>
-						{chapters[activeChapter]}
-					</p>
+							
+					<AnimatePresence mode='wait'>
+						<motion.p 
+							initial={{x:-200,opacity:0}}
+							animate={{x:0,opacity:1}}
+							exit={{x:200,opacity:0}}
+							transition={{duration:0.5}}
+						className='story-text' key={activeChapter}>
+							{chapters[activeChapter].split(' ').map((word,index)=>{
+								return	<motion.span 
+									initial={{opacity:0,y:10}}
+									animate={{opacity:1,y:0}}
+									transition={{duration:0.5,delay:index*0.1}}
+								key={'tower-text'+index}>
+									{' '+ word}
+							</motion.span>
+							})}
+						</motion.p>
+					</AnimatePresence>
 
 					<div className="controls">
 							<button className='btn btn-ctrl' onClick={prev}><FaArrowLeft/></button>

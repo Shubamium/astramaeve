@@ -1,7 +1,8 @@
 'use client'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './navigation.scss'
 import Link from 'next/link';
+import { stagger, useAnimate } from 'framer-motion';
 type Props = {}
 
 
@@ -90,6 +91,7 @@ export default function Navigation({}: Props) {
 	const videoRef = useRef<HTMLVideoElement>(null);
 	const [activeSub, setActiveSub] = useState<Navlist>('home');
 
+	const [scope,animate] = useAnimate()
 	
 	const openSub = (sub:Navlist)=>{
 		if(subLinks[sub].length === 0){
@@ -103,6 +105,7 @@ export default function Navigation({}: Props) {
 	const closeSub = ()=>{
 
 		setIsSubOpen(false);
+	
 	}
 
 	const openNav = ()=>{
@@ -112,7 +115,30 @@ export default function Navigation({}: Props) {
 		}
 		setTimeout(()=>{
 			videoRef.current?.play()
+		
 		},2200)
+
+		const playAnimation = async ()=>{
+			await animate('.sidebar-link',{
+				x:-400,
+				scale:1
+			},{
+				duration:0,
+				delay:0
+			})
+			animate('.sidebar-link',{
+				x:0,
+			},{
+				duration:0.5,
+				delay:stagger(0.1,{
+					startDelay:2
+				}),
+				type:'spring',
+				stiffness:200,
+				damping:25
+			})
+		}
+		playAnimation()
 	}
 	const closeNav = ()=>{
 		setIsSubOpen(false);
@@ -121,10 +147,37 @@ export default function Navigation({}: Props) {
 			videoRef.current.currentTime = 0
 			videoRef.current.pause();
 		}
+		const playAnimation = async ()=>{
+			animate('.sidebar-link:not(:hover)',{
+				x:-400,
+				scale:1,
+			},{
+				duration:0.5,
+				delay:stagger(0.1,{
+					startDelay:0
+				}),
+				type:'spring',
+				stiffness:200,
+				damping:25
+			})
+			await animate('.sidebar-link:hover',{
+				x:100,
+				scale:2,
+			},{
+				duration:0.5,
+				type:'spring',
+				stiffness:200,
+				damping:25
+			})
 	
+		}
+		playAnimation()
 	}
+
+	useEffect(()=>{
+	},[])
 	return (
-		<div id='navigation' className={isSidebarOpen ? 'open' : 'close'}>
+		<div id='navigation' ref={scope} className={isSidebarOpen ? 'open' : 'close'}>
 			<div className="sidebar">
 				<div className="side-text top">
 					<p>navigation</p>

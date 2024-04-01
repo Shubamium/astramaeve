@@ -109,3 +109,20 @@ main{
 	pointer-events: none;
 	
 }
+
+
+@media screen and (orientation:portrait) {
+
+	.decor_background-circle{
+		position: fixed;
+		left: -500px;
+		top: -400px;
+		width: 900px;
+		height: 900px;
+		animation: speen 190s infinite linear;
+		opacity: .9;
+		mix-blend-mode: hard-light;
+		z-index: -1;
+		// width: 40vh;
+	}
+}

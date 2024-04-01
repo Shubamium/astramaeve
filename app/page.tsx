@@ -16,41 +16,41 @@ export default function Home() {
 					animate={{opacity:1,x:0}}
 					transition={{duration:1,delay:0}}
 					className="text-part">
-					<motion.p
-						initial={{opacity:0,x:100}}
-						animate={{opacity:1,x:0}}
-						transition={{duration:1,delay:2}}
-					className='pretitle'>astralias israndi mæve-ir salvere</motion.p>
-					<motion.h1 
-						initial={{opacity:0,x:100}}
-						animate={{opacity:1,x:0}}
-						transition={{duration:1,delay:2.5}}
-					
-					className='main-title'>✦ {"Astra \n Maeve".split('').map((letter,index)=>{
-						return <motion.span 
-							initial={{scale:1.5,y:200,opacity:0,filter:'drop-shadow(0px 0px 20px 4px white)'}}
-							animate={{scale:1,y:0,opacity:1,filter:'drop-shadow(0px 0px 20px 4px transparent)'}}
-							transition={{duration:0.4,delay:2.5 + (index*0.2)}}
-							style={{display:'inline-block'}}
-						key={'title-letter'+index} >
-								{letter}
-						</motion.span>
-					})}</motion.h1>
-					<motion.p 
-						initial={{opacity:0,x:100}}
-						animate={{opacity:1,x:0}}
-						transition={{duration:1,delay:3}}
-					
-					className='subtitle'>recluse elven archmage ✵ reincarnated blue giant star ✵ loves bunnies</motion.p>
-					<motion.div
-						initial={{opacity:0,scale:0}}
-						animate={{opacity:1,scale:1}}
-						transition={{duration:1,delay:3.2}}
-					
-					className="action">
-						<Link href="/story" className='btn btn-main'>✦ Discover</Link>
-						<Link href="/stream" className='btn btn-main ghost'>✦ Catch my streams  </Link>
-					</motion.div>
+						<motion.p
+							initial={{opacity:0,x:100}}
+							animate={{opacity:1,x:0}}
+							transition={{duration:1,delay:2}}
+						className='pretitle'>astralias israndi mæve-ir salvere</motion.p>
+						<motion.h1 
+							initial={{opacity:0,x:100}}
+							animate={{opacity:1,x:0}}
+							transition={{duration:1,delay:2.5}}
+						
+						className='main-title'>✦ {"Astra \n Maeve".split('').map((letter,index)=>{
+							return <motion.span 
+								initial={{scale:1.5,y:200,opacity:0,filter:'drop-shadow(0px 0px 20px 4px white)'}}
+								animate={{scale:1,y:0,opacity:1,filter:'drop-shadow(0px 0px 20px 4px transparent)'}}
+								transition={{duration:0.4,delay:2.5 + (index*0.2)}}
+								style={{display:'inline-block'}}
+							key={'title-letter'+index} >
+									{letter}
+							</motion.span>
+						})}</motion.h1>
+						<motion.p 
+							initial={{opacity:0,x:100}}
+							animate={{opacity:1,x:0}}
+							transition={{duration:1,delay:3}}
+						
+						className='subtitle'>recluse elven archmage ✵ reincarnated blue giant star ✵ loves bunnies</motion.p>
+						<motion.div
+							initial={{opacity:0,scale:0}}
+							animate={{opacity:1,scale:1}}
+							transition={{duration:1,delay:3.2}}
+						
+						className="action">
+							<Link href="/story" className='btn btn-main'>✦ Discover</Link>
+							<Link href="/stream" className='btn btn-main ghost'>✦ Catch my streams  </Link>
+						</motion.div>
 
 					<div className="decoration">
 						<motion.svg 
@@ -78,7 +78,7 @@ export default function Home() {
 						<motion.img 
 						
 							initial={{opacity:0,x:200}}
-							animate={{opacity:1,x:-400}}
+							animate={{opacity:1,x:0}}
 							transition={{duration:1.4,delay:0}}
 						src="./arts/character_model_s.png" alt="" className='model' />
 				</figure>

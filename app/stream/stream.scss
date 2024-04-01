@@ -228,7 +228,7 @@ transition: all 450ms;
 			// justify-content: center;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: .55em;
+			gap: 1em;
 			
 			.title{
 				color: #F8AF0F;
@@ -245,7 +245,7 @@ transition: all 450ms;
 				background: #749af922;
 				backdrop-filter: blur(10px);
 				border-radius: 2em;
-				box-shadow: 0px 0px 15px rgba(30, 18, 41, 0.273);
+				box-shadow: 0px 0px 15px rgba(49, 26, 71, 0.688);
 				padding: 20px 30px;
 
 				.lf-goals{
@@ -254,8 +254,10 @@ transition: all 450ms;
 					display: flex;
 					flex-direction: column;
 					gap: 2em;
-					
+					overflow: hidden;
+					border-radius: 2em 0 2em 0;
 					position: relative;
+					box-shadow: 0px 0px 15px 2px rgba(26, 20, 142, 0.811);
 					--height:1;
 					.goal{
 						position: relative;
@@ -298,6 +300,7 @@ transition: all 450ms;
 
 					--height:2;
 					.goal{
+						box-shadow: 0px 0px 15px 2px rgba(26, 20, 142, 0.811);
 
 						background: linear-gradient(180deg, rgba(0, 195, 255, 0.928) 0%, rgba(255, 188, 45, 0.928) 100%), url('/backgrounds/galaxy_slight.png');
 						background-blend-mode: screen;

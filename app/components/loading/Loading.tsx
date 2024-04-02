@@ -12,6 +12,10 @@ export default function Loading({}: Props) {
 		setTimeout(()=>{
 			setShowSplash(true)
 		},3000)
+		setTimeout(()=>{
+			setShowSplash(true)
+			
+		},10000)
   }, []);
 
 	

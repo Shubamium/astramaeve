@@ -15,6 +15,7 @@ export default function StroyThree({}: Props) {
 							whileInView={{scale:1,opacity:1}}
 							transition={{duration:2,delay:0}}
 						src="/decors/story_circle.png" alt="" className='story_circle l ' />
+						
 					</div>
 					<div className="story-container">
 						<motion.div 

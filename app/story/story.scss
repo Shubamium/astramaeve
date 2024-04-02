@@ -1,5 +1,6 @@
 #page_story{
 	padding-bottom: 400px;
+	overflow: initial;
 	.general-info{
 		max-width: 1200px;
 		display: grid;
@@ -265,7 +266,7 @@
 	}
 
 	.childhood{
-		max-width: 1200px;
+		max-width: min(1200px,90%);
 		margin: 200px auto;
 		display: grid;
 		grid-template-columns: 1fr 1.25fr 1fr;
@@ -358,7 +359,7 @@
 		.decor-container{
 			position: relative;
 			max-width: 100px;
-			height: 100%;
+			overflow: initial;
 			.story_circle{
 				position: sticky;
 				top: 5%;
@@ -551,5 +552,244 @@
 			}
 		}
 
+	}
+}
+
+
+@media screen and (max-width:850px) {
+	#page_story{
+		.general-info{
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			flex-direction: column;
+			.display{
+				// min-height: 50vh;
+				mask: linear-gradient(0deg, transparent 0%, white 5%, white 95%, transparent 100%);
+				display: flex;
+				justify-content: center;
+				.character-large{
+					position: relative;
+					width: 100%;
+					margin: 0 auto;
+					object-fit: contain;
+					scale: 1.3;
+				}
+			}
+			.general-info{
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:768px) {
+	#page_story{
+		overflow: hidden;
+		#story_one{
+			padding-inline: 1em;
+			.confine{
+				gap: 1em;
+			}
+			figure img{
+				box-shadow: 0px 0px 14px 0px #2F299D;
+			}
+			
+			.story-part{
+				.story-heading{
+					hr{
+						display: none;
+						// margin: 0;
+						// padding: 0;
+					}
+					h2{
+						// margin: 0 auto;
+						font-size: 1.5rem;
+					}
+				}
+				p{
+					font-size: .9rem;
+				}
+			}
+		}
+		.childhood{
+			display: flex;
+			// justify-content: center;
+			flex-direction: column;
+		}
+		.story-three .decor-container .story_circle{
+			display: none;
+			translate: 0%;
+			// height: 10vh;
+			width: 300px;
+			height: 300px;
+			&.r{
+				translate: -15%;
+			}
+		}
+		.tower{
+			padding: 0.5em 1em;
+			.decor-circle{
+				scale: 0.8;
+			}
+			.content{
+				padding-top: 10vh;
+			}
+			.tower-title{
+				margin:  0.1em;
+				gap: 0;
+				h2{
+					font-size: 1.6rem;
+					width: 100%;
+				}
+			}
+		}
+	
+		.salvere{
+			.content{
+				display: flex;
+				flex-direction: column;
+
+				figure {
+					width: 100%;
+					height: 400px;
+					img{
+						object-fit: contain;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:500px) {
+	#page_story{
+		.general-info{
+			.about{
+				.story-text{
+					font-size: 1.1rem;
+				}
+				.who-is{
+					margin-top: 4em;
+					.who-title{
+							font-size: 6vw;
+					}
+				}
+				.info{
+					.info-text{
+							font-size: 1.4rem !important;
+							font-weight: bold;
+					}
+					width: 100%;
+				}
+				.info-lists{
+					.info-row{
+						display: flex;
+						flex-wrap: wrap;
+					}
+					
+				}
+				.about-nav{
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+			
+					.btn{
+						width: 100%;
+						font-size: 1.2rem;
+						font-weight: bold;
+					}
+					// grid-template-columns: 1fr 1fr;
+				}
+			}
+		}
+		.tower{
+			padding: 0.5em 1em;
+			.decor-circle{
+				scale: .9;
+				top: 0%;
+				left: 0%;
+				z-index: -2;
+				// transform-origin: 0 0;
+			}
+		}
+	}
+}
+@media screen and (max-width:425px) {
+	#page_story{
+		.companionship{
+			article{
+				max-width: 90%;
+				margin-top: 2vh;
+			}
+		}
+		.story_two .content{
+			// padding:;
+			margin: .25em;
+		}
+		.childhood{
+			.panel{
+				padding: 1.5em 1em;
+				p{
+					font-size: .8rem;
+				}
+			}
+		}
+		.story-three{
+			.story-container{
+				.story-part{
+					padding: .5em 0em;
+					p{
+						// width: 100%;
+						// margin:  0 auto;
+						font-size: .7rem;
+					}
+				}
+			}
+		}
+		.tower{
+			.tower-title{
+				gap: 2vh;
+				h2{
+					font-size: min(1.5rem,5vw);
+					white-space: nowrap;
+				}
+			}
+			p{
+				font-size: .8rem;
+			}
+			.controls{
+				p{
+					font-size: .6rem;
+
+				}
+
+				.btn-ctrl{
+					width: 30px;
+					height: 30px;
+					padding: .25em;
+				}
+			}
+		}
+
+		.salvere{
+			padding: .25em;
+			.content{
+				.story-part{
+					.salvere-title{
+						h2{
+							font-size: 1.8rem;
+							white-space: nowrap;
+						}
+						hr{
+							width: 100%;
+						}
+					}
+					p{
+						font-size: .9rem;
+					}
+				}
+			}
+		}
 	}
 }

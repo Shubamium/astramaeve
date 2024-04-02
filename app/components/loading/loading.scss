@@ -66,7 +66,40 @@
 		animation-delay: 2s;
 	}
 }
+@media screen and (max-width:1024px) {
+	.loading-screen{
+		width: 100%;
+		.loading-text{
+			font-size: 1rem;
+			p{
+				max-width: 70%;
+				margin: 0 auto;
 
+			}
+			br{
+				// display: none;
+				margin-bottom: 5vh;
+			}
+		}
+	}
+}
+@media screen and (max-width:550px) {
+	.loading-screen{
+		width: 100%;
+		.loading-text{
+			p{
+				font-size: 1rem;
+				max-width: 70%;
+				margin: 0 auto;
+
+			}
+			br{
+				// display: none;
+				margin-bottom: 5vh;
+			}
+		}
+	}
+}
 @keyframes disable-loading {
 	0%{
 		opacity: 1;
@@ -130,3 +163,4 @@
 		filter: blur(0vw);
 	}
 }
+

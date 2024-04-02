@@ -99,9 +99,9 @@ export default function Story({}: Props) {
 					
 
 				</article>
-				<article className='display'>
+				<figure className='display'>
 						<img src="/arts/character_large.png" alt="" className='character-large' />
-				</article>
+				</figure>
 			</section>
 			<section className="story_one" id='story_one'>
 				<div className="confine">

@@ -16,3 +16,13 @@
 		}
 	}
 }
+
+@media screen and (max-width:420px) {
+	.shop-nav{
+		// display: flex;
+		flex-direction: column;
+		.btn-shop-nav{
+			width: 100%;
+		}
+	}
+}

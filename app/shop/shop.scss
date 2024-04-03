@@ -5,6 +5,7 @@
 		background: url('/backgrounds/tower-bg.png');
 		background-size: contain;
 		background-attachment: fixed;
+		// background-position: left center;
 
 		// display: flex;
 		// justify-content: center;
@@ -54,5 +55,47 @@
 		}
 		// align-items: center;
 
+	}
+}
+
+@media screen and (max-width:768px) {
+	#page_shop{
+		.shop-guidelines{
+			// padding: 100px;
+			// margin: 2em 0;
+		background-size: cover;
+			.confine{
+				grid-template-columns: 1fr 1fr;
+				// padding: .25em;
+				.terms{
+					
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:550px) {
+	#page_shop{
+		.shop-guidelines{
+			.confine{
+				.terms{
+					font-size: .9rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:420px) {
+	#page_shop{
+		.shop-guidelines{
+			.confine{
+				display: flex;
+				flex-direction: column;
+				.terms{
+				}
+			}
+		}
 	}
 }

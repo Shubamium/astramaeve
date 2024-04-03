@@ -25,3 +25,19 @@
 		margin: 0 auto;
 	}
 }
+
+@media screen and (max-width:768px) {
+	.shop-heading{
+		.title-part{
+			h2{
+				font-size: 2.5rem;
+			}
+			hr{
+				width: 100px;
+			}
+		}
+		p{
+			font-size: .9rem;
+		}
+	}
+}

@@ -67,3 +67,40 @@
 		}
 	}
 }
+
+@media screen and (max-width:768px) {
+	#page_commission .comms-guidelines {
+		.guidelines-list{
+			.guideline{
+				font-size: .8rem;
+			}
+		}
+		.comms-nav{
+			padding: 1em;
+			.comms-nav-item{
+				font-size:1em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:420px) {
+	#page_commission .comms-guidelines {
+		.confine{
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		.guidelines-list{
+			.guideline{
+				font-size: .8rem;
+			}
+		}
+		.comms-nav{
+			padding: 1em;
+			margin-bottom: 4vh;
+			.comms-nav-item{
+				font-size:1em;
+			}
+		}
+	}
+}

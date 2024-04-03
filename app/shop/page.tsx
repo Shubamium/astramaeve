@@ -29,7 +29,7 @@ export default async function page({}: Props) {
 		<main id="page_shop">
 			<PageTitle
 				title='Shop'
-				subtitle='item listing and commission info'
+				subtitle='item listing '
 			/>
 			<ShopNavigation active="shop"/>
 			<ItemListing

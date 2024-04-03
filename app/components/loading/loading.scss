@@ -83,6 +83,23 @@
 		}
 	}
 }
+@media screen and (max-width:768px) {
+	.loading-screen{
+		// background-position: -640px 0;
+		.loading-video{
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			object-fit: contain;
+			// animation: video-scale 20s infinite alternate-reverse ease;
+			filter:blur(5px);
+			width: 900px;
+			height: 100vh;
+			transform: translateX(-20%);
+	
+		}
+	}
+}
 @media screen and (max-width:550px) {
 	.loading-screen{
 		width: 100%;
@@ -97,6 +114,21 @@
 				// display: none;
 				margin-bottom: 5vh;
 			}
+		}
+	}
+	.loading-screen{
+		// background-position: -640px 0;
+		.loading-video{
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			object-fit: contain;
+			// animation: video-scale 20s infinite alternate-reverse ease;
+			filter:blur(5px);
+			width: 900px;
+			height: 100vh;
+			transform: translateX(-35%);
+	
 		}
 	}
 }

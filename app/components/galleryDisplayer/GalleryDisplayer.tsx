@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './galleryDisplayer.scss'
 import { FaArrowLeft, FaArrowRight, FaDiamond } from 'react-icons/fa6'
 import { galleryData } from '@/app/art/page'
@@ -31,6 +31,7 @@ export default function GalleryDisplayer({
 			return Math.min(id+1,aImageList.length-1)
 		});
 	}
+
 	return (
 		<section className='gallery-displayer' id={id}>
 			<div className="title">
@@ -77,7 +78,7 @@ export default function GalleryDisplayer({
 										animate={{x:0,opacity:1}}
 										exit={{x:-100,opacity:0}}
 										transition={{duration:0.5}}
-										key={'active-image'+title+activeImage}
+										key={'active-image'+galleryData[activeCategory].category_name+activeImage}
 									src={urlFor(aImage.image).url()} alt="" className='active-img'  />
 										</AnimatePresence>
 								<div className="bottom-part">

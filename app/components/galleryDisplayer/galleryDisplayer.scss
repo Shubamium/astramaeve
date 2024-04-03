@@ -51,6 +51,7 @@
 		display: flex;
 		justify-content: center;
 		gap: 1em;
+		flex-wrap: wrap;
 		margin: 1.55em 1em;
 		.btn-gallery{
 			box-shadow: 0px 0px 3px black;
@@ -194,6 +195,40 @@
 			box-shadow: 0px 0px 10px #2dffff81;
 			&:hover{
 				object-fit: contain;	
+			}
+		}
+	}
+}
+
+@media screen and (max-width:425px) {
+	.gallery-displayer{
+		.gallery-nav{
+			.btn-gallery{
+				font-size: 1rem;
+				width: 100%;
+				text-align: left;
+			}
+		}
+		.gallery-part{
+			.gallery-btn{
+				display: none;
+
+			}
+		}
+		.image-part{
+			.bottom-part{
+				.artwork-credit{
+					font-size: .5rem !important;
+					width: initial !important;
+					// font-weight: bold;
+				}
+				span{
+					font-size: .7rem;
+					display: block;
+					max-width: 100%;
+					text-wrap: wrap;
+					white-space: initial;
+				}
 			}
 		}
 	}

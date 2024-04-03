@@ -57,3 +57,30 @@
 		}	
 	}
 }
+
+@media screen and (max-width:1024px) {
+	.general_rules{
+	margin-bottom: 80vh;
+
+	}
+}
+@media screen and (max-width:550px) {
+	.general_rules{
+		padding: 2.25em .5em;
+	}
+}
+
+@media screen and (max-width:420px) {
+	.general_rules{
+		.rule-container{
+			// height: 100px;
+			padding: 4em .35em;
+			.rule-grid{
+				width: 50vw;
+				.rule{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

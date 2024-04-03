@@ -5,8 +5,7 @@
 		background: linear-gradient(180deg, #9833FD 15%, #2F299D 100%);
 		margin: 100px 0;
 		.content{
-			max-width:min( 1000px, 80%);
-			max-width: 1200px;
+			width:min( 1000px,80%);
 
 			margin: 0 auto;
 			display: grid;
@@ -584,7 +583,7 @@ transition: all 450ms;
 
 			.description{
 				padding: 1em ;
-				max-width: min(500px,60%);
+				max-width: min(350px,80%);
 				margin:0 auto;
 				font-size: 1.3rem;
 				color: #2DFFFF;
@@ -622,6 +621,318 @@ transition: all 450ms;
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:768px) {
+	#page_stream{
+		.schedules{
+			.content{
+				// grid-template-columns: 1fr;
+				display: flex;
+				flex-direction: column-reverse;
+			}
+		}
+		#sponsors{
+			.confine{
+				display: flex;
+				flex-direction: column;
+				.spon-list{
+					width: 100%;
+					.sponsor-slider{
+						width: 100%;
+					}
+				}
+			}
+		}
+	  .goals .goals-list{
+			display: flex;
+			flex-direction: column;
+		}
+
+		#credits{
+			.credit-header{
+				.confine{
+					max-width: initial;
+					width: 100%;
+				}				
+			}
+			.credit-list{
+				.credit{
+					min-width: 25%;
+				}
+			}
+		}
+
+		#fandom{
+			.content{
+				// grid-template-columns: 0;
+				display: flex;
+				flex-direction: column;
+				figure{
+					height: 300px;
+					width: 100%;
+					img{
+						
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:550px) {
+	#page_stream{
+		.schedules{
+			.content{
+				.sched-detail{
+					transform: 0;
+					margin:  0;
+					max-width: initial;
+					width: 100%;
+
+					img{
+						max-width: 100%;
+						max-height: 25vh;
+					}
+					h2{
+						font-size: 1.2rem;
+					}
+					p{
+						font-size: .8rem;
+					}
+					margin-top: -5vh;
+					.btn-styled{
+						font-size: .85rem;
+					}
+				}
+				.sched-part{
+					margin-top: 10vh;
+					scale: 1;
+					img{
+						height: 50vh;
+					}
+				}
+			
+			}
+		}
+	
+		#credits{
+			.credit-header{
+				.confine{
+					max-width: initial;
+					width: 100%;
+				}				
+			}
+			.credit-list{
+				gap: 2em;
+				.credit{
+					width: 30%;
+					margin-top: 15vh;
+					text-align: center;
+					.role{
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:420px) {
+	#page_stream .sponsors {
+		.confine {
+			max-width: 100%;
+			article{
+				// overflow: hidden;
+				padding: 1em;
+				max-width: 80%;
+				.spon-head{
+					h2{
+						font-size: 1.5rem;
+					}
+				}
+				p{
+					font-size: .9rem;
+				}
+				.contact-mail{
+					white-space: nowrap;
+					font-size: 4.4vw;
+				}
+			}
+			.spon-list .sponsor-img{
+				width: 250px;
+				height: 100%;
+				aspect-ratio: 1/1;
+				max-height: 200px;
+				object-fit: cover;
+			}
+		}
+	}
+	#page_stream{
+		.goals{
+			.goals-head{
+				h2{
+					margin:  1em 0.5em;
+					font-size: 1.8rem;
+				}
+				hr{
+					width: 100%;
+				}
+			}
+		}
+		.goals .goals-list{
+			max-width: 95%;
+			.goal-container{
+				padding: 1em;
+				.title{
+					font-size: 1rem;
+				}
+				.description{
+					font-size: .8rem;
+				}
+				.lf-goals{
+					padding: 1em;
+					p{
+						font-size: .8rem;
+					}
+				}
+				.r-goals{
+					padding: 0em;
+					.goal{
+						border-radius: 0;	
+						// width: 100%;
+						// transform: translateX(-5%);
+						// z-index: -100;
+						// grid-template-columns:px 1fr;
+					  .goal-text{
+							p{
+								font-size: .6rem;
+							}
+							.date{
+									font-size: .5rem;
+							}	
+						}
+					}
+				}
+			}
+		}
+		#credits{
+			.credit-header{
+				.confine{
+					max-width: initial;
+					width: 100%;
+					.credit-title{
+						font-size: 1.4rem !important;
+					}
+					p{
+						font-size: .7rem;
+					}
+				}				
+			}
+			.credit-list{
+				gap: 2em;
+				.credit{
+					width: 30%;
+					margin-top: 15vh;
+					text-align: center;
+					.role{
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+		#fandom{
+			padding: 1em;
+			.content{
+				// grid-template-columns: 0;
+				display: flex;
+				flex-direction: column;
+				padding: 0;
+				figure{
+					height: 300px;
+					width: 100%;
+					img{
+						
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:350px) {
+	#page_stream{
+		#credits{
+			.credit-header{
+				.confine{
+					max-width: initial;
+					width: 100%;
+				}				
+			}
+			.credit-list{
+				gap: 2em;
+				.credit{
+					width: 40%;
+					margin-top: 15vh;
+					text-align: center;
+					.role{
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+		#fandom{
+			.content{
+				// grid-template-columns: 0;
+				display: flex;
+				flex-direction: column-reverse;
+				.story-part{
+					.salvere-title{
+						h2{
+							font-size: 1.9rem;
+							white-space: nowrap;
+						}
+						hr{
+							width: 100%;
+						}
+					}
+					.story-text{
+						font-size: .8rem;
+					}
+					.action{
+						display: flex;
+						flex-direction: column;
+					}
+				}
+				figure{
+					height: 40vh;
+					width: 100%;
+					img{
+						
+					}
+				}
+			}
+		}
+		#collabs{
+			.art-part{
+				scale: .6;
+				transform: translateY(18px);
+				transform-origin: bottom;
+			}
+			.collab-text{
+				.description{
+					font-size: .8rem;
+
+				}				
+			}
+			.action{
+				display: flex;
+				flex-direction: column-reverse;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 	}

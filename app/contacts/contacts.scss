@@ -166,3 +166,179 @@
 		}
 	}
 }
+
+
+@media screen and (max-width:1440px) {
+
+	#page_contacts{
+		.contact-container{
+			.listcont{
+				&.left-contact{
+					padding: 0;
+				}
+				.contact{
+					width: 100px;
+					height: 100px;
+					.contact-content{
+					// scale: .6;
+						.media-type{
+							font-size: 1.2rem;
+						}						
+						.handles{
+							font-size: .8rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	#page_contacts .contact-container .listcont .contact.offset{
+		left:-100px;
+	}
+	#page_contacts .contact-container .listcont.right-contact .offset{
+		left: 100px;
+	}
+}
+
+@media screen and (max-width:1024px) {
+	#page_contacts{
+		.contact-container{
+			 .center-contact{
+				padding-bottom: 200px;
+				 .banner{
+						img{
+							width: 300px;
+							height: 300px;
+						}
+						&::before{
+							display: none;
+						}
+					}
+					.maeve-logo{
+						width: 200px;
+						height: 200px;
+						margin-top: -200px;
+						// padding-bottom: 2/00px;
+					}
+			 }
+		}
+	}
+}
+@media screen and (max-width:768px) {
+	#page_contacts{
+		.contact-container{
+		
+		}
+		.contact-container{
+			.listcont{
+				&.left-contact{
+					padding: 0;
+				}
+				.contact{
+					width: 80px;
+					height: 80px;
+					svg{
+						width: 50px;
+						height: 50px;
+					}
+				
+					.contact-content{
+					// scale: .6;
+						.media-type{
+							font-size: 1rem;
+						}						
+						.handles{
+							font-size: .5rem;
+						}
+					}
+				}
+			}
+			 .center-contact{
+				padding-bottom: 200px;
+				 .banner{
+						img{
+							width: 200px;
+							height: 200px;
+						}
+						&::before{
+							display: none;
+						}
+					}
+					.maeve-logo{
+						width: 100px;
+						height: 100px;
+						margin-top: -130px;
+						// padding-bottom: 200px;
+					}
+			 }
+		}
+	}
+	#page_contacts .contact-container .listcont .contact.offset{
+		left:-50px;
+	}
+	#page_contacts .contact-container .listcont.right-contact .offset{
+		left: 50px;
+	}
+}
+
+@media screen and (max-width:550px) {
+	#page_contacts{
+		.contact-container{
+			display: flex;
+			flex-direction: column;
+			padding-top: 10vh;
+			.listcont{
+				display: flex;
+				flex-direction: row;
+				gap: 3em;
+				.contact.offset{
+					left: 0;
+					top: -5vh;
+				}
+			}
+			.listcont.right-contact{
+				display: flex;
+				flex-direction: row;
+				gap: 3em;
+				// margin-top: -20px;
+				transform: translateY(-200px);
+				.contact.offset{
+					left: 0;
+					top: 5vh;
+				}
+			}
+			.center-contact{
+				padding: 0;
+				margin:  0;
+				.maeve-logo{
+					margin-top: 0;
+					transform: translateY(-40%);
+					margin-bottom: 50px;
+					width: 250px;
+					height: 250px;
+				}
+				.banner{
+					height: 40vh;
+					margin: 0;
+					img{
+						height: 100%;
+						object-fit: cover;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:360px) {
+	#page_contacts{
+
+	}
+	#page_contacts .contact-container .listcont {
+		scale: .8;
+		&.right-contact{
+			transform:translateY(-300px);
+		}
+	}
+}

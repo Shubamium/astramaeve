@@ -51,3 +51,38 @@
 	}
 
 }
+
+@media screen and (max-width:768px) {
+	.page-title{
+		.text-part{
+			// .subt
+			scale: 4;
+		}
+		.decor_diamonds{
+			scale: .6;
+		}
+	}
+}
+
+@media screen and (max-width:550px) {
+	.page-title{
+		.text-part{
+			// .subt
+			scale: 3;
+		}
+		.decor_diamonds{
+			scale: .4;
+		}
+	}
+}
+@media screen and (max-width:420px) {
+	.page-title{
+		.text-part{
+			// .subt
+			scale: 2;
+		}
+		.decor_diamonds{
+			scale: .3;
+		}
+	}
+}

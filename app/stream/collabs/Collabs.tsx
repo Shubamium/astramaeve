@@ -24,7 +24,7 @@ export default function Collabs({}: Props) {
 				<div className="collab-links">
 						<motion.div
 							initial={{opacity:0,scale:5,rotate:-40}}
-							whileInView={{opacity:1,scale:1,rotate:0}}
+							animate={{opacity:1,scale:1,rotate:0}}
 							transition={{duration:0.7,delay:0.5, type:'spring', stiffness:150,damping:12}}
 						>
 							<a href='mailto:astralias.maeve@gmail.com' target='_blank' className="btn collab-link">
@@ -33,7 +33,7 @@ export default function Collabs({}: Props) {
 						</motion.div>
 						<motion.div
 							initial={{opacity:0,scale:5,rotate:-40}}
-							whileInView={{opacity:1,scale:1,rotate:0}}
+							animate={{opacity:1,scale:1,rotate:0}}
 							transition={{duration:0.7,delay:0.7, type:'spring', stiffness:150,damping:12}}
 						>
 							<a href='https://discord.com/invite/hqWVaBQyn7' target='_blank' className="btn collab-link">
@@ -43,7 +43,7 @@ export default function Collabs({}: Props) {
 
 						<motion.div
 							initial={{opacity:0,scale:5,rotate:-40}}
-							whileInView={{opacity:1,scale:1,rotate:0}}
+							animate={{opacity:1,scale:1,rotate:0}}
 							transition={{duration:0.7,delay:0.9, type:'spring', stiffness:150,damping:12}}
 						>
 							<a href='https://twitter.com/astra_maeve' target='_blank' className="btn collab-link">

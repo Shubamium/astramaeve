@@ -33,8 +33,7 @@ export default function Story({}: Props) {
             {`Astra, the elven archmage of the kingdom of Salvere and presiding as the Master of the Amethyst Tower, is a figure of intrigue. Her days are often spent within the confines of her laboratories, where she delves into experiments, immerses herself in books, or indulges in games.`}
           </p>
           <p className="story-text">
-            {`Beyond her seemingly detached demeanor lies a depth that belies her years, evident in the occasional distant gaze that speaks of experiences far beyond her apparent age.
- Tower, is a figure of intrigue. Her days are often spent within the confines of her laboratories, where she delves into experiments, immerses herself in books, or indulges in games.`}
+            {`Beyond her seemingly detached demeanor lies a depth that belies her years, evident in the occasional distant gaze that speaks of experiences far beyond her apparent age.`}
           </p>
           <p className="story-text">
             {`But heed this warning: under no circumstances should one offer her coffee, for reasons best left unspoken."`}

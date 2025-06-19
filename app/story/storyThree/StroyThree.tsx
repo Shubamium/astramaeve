@@ -36,7 +36,8 @@ export default function StroyThree({}: Props) {
           className="story-part"
         >
           <img src="/arts/chibi_storyb.png" alt="" className="chibi" />
-          <p>{`Astra's personality holds a tapestry of contradictions. She cherished company but preferred solitude, possessed a profound love for magical experimentation yet displayed laziness to an extreme. `}</p>
+          <p>{`
+						Astra's personality is a tapestry of contradictions: she cherishes company but prefers solitude, harbors a profound love for magical experimentation, yet exhibits extreme laziness.`}</p>
         </motion.div>
 
         <motion.div

@@ -31,12 +31,23 @@ This is the whimsical dance of life in the Amethyst Tower – where hashtags are
 So, join the revelry, where the battle cry is not just "coffee," but "coff" – because in the realm of the Amethyst Tower, everyone is welcome!
 	`,
 ];
+
+const chaptersTwo = [
+  `On a fateful day, Astra faced her greatest challenge:
+Adding friends on Blue Protocol.`,
+  `After countless failed attempts, the truth was uncovered.
+The missing piece?`,
+  `A simple #.
+A detail written clearly in the description`,
+  `Thus, the Braincells awakened.
+Together, they shall guide Astra toward the impossible goal of carrying the collective intelligence needed to keep her functional.`,
+];
 export default function Fandom({}: Props) {
   const [activeChapter, setActiveChapter] = useState(0);
 
   const next = () => {
     setActiveChapter((prev) => {
-      return Math.min(prev + 1, chapters.length - 1);
+      return Math.min(prev + 1, chaptersTwo.length - 1);
     });
   };
   const prev = () => {
@@ -62,7 +73,7 @@ export default function Fandom({}: Props) {
               className="story-text"
               key={activeChapter}
             >
-              {chapters[activeChapter].split(" ").map((word, index) => {
+              {chaptersTwo[activeChapter].split(" ").map((word, index) => {
                 return (
                   <motion.span
                     initial={{ opacity: 0, y: 10 }}
@@ -82,7 +93,7 @@ export default function Fandom({}: Props) {
                 <FaArrowLeft />
               </button>
               <p className="page-indicator">
-                {activeChapter + 1}/{chapters.length}
+                {activeChapter + 1}/{chaptersTwo.length}
               </p>
               <button className="btn btn-ctrl" onClick={next}>
                 <FaArrowRight />

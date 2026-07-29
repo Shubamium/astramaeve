@@ -92,8 +92,10 @@
       max-width: min(1000px, 85%);
 
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      // display: grid;
+      // grid-template-columns: 1fr 1.2fr;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 1em;
       article {
@@ -142,11 +144,21 @@
         // display: flex;
         // align-items: center;
         // justify-content: center;
-        width: 50%;
+        // width: 50%;
+        display: flex;
         gap: 1em;
+
         .sponsor-slider {
-          width: 500px;
+          width: min(100%, 1000px);
           height: 100%;
+          margin: 0 auto;
+          mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 5%,
+            black 95%,
+            transparent 100%
+          );
           .sponsor-slide {
             padding: 1em;
             transition: all 450ms ease;
@@ -247,7 +259,8 @@
         padding: 20px 30px;
 
         .lf-goals {
-          background: url("/backgrounds/galaxy_subtle.png"),
+          background:
+            url("/backgrounds/galaxy_subtle.png"),
             linear-gradient(
               180deg,
               #cd2ff1af 0%,
@@ -304,7 +317,8 @@
           .goal {
             box-shadow: 0px 0px 15px 2px rgba(26, 20, 142, 0.811);
 
-            background: linear-gradient(
+            background:
+              linear-gradient(
                 180deg,
                 rgba(0, 195, 255, 0.928) 0%,
                 rgba(255, 188, 45, 0.928) 100%
@@ -470,7 +484,8 @@
   }
 
   .fandom {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         102deg,
         rgba(216, 124, 255, 0.26) 0%,
         rgba(189, 39, 223, 0) 100%
@@ -570,7 +585,8 @@
   .collabs {
     margin-top: 600px;
     .art-part {
-      background: url("/backgrounds/shatter_slight.png"),
+      background:
+        url("/backgrounds/shatter_slight.png"),
         linear-gradient(180deg, #9a34fe 0%, #752bbd 100%);
       display: flex;
       border: 4px solid #f8af0f;

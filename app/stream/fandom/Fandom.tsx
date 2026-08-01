@@ -42,6 +42,7 @@ A detail written clearly in the description`,
   `Thus, the Braincells awakened.
 Together, they shall guide Astra toward the impossible goal of carrying the collective intelligence needed to keep her functional.`,
 ];
+//
 export default function Fandom({}: Props) {
   const [activeChapter, setActiveChapter] = useState(0);
 
